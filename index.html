@@ -23,13 +23,26 @@
         <div class="nav-container">
             <div class="nav-logo">Byeonghyeon Kim</div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="assets/Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
+                <li><a href="#home" class="nav-link" data-en="Home" data-ko="홈">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-ko="소개">About</a></li>
+                <li><a href="#skills" class="nav-link" data-en="Skills" data-ko="스킬">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-en="Projects" data-ko="프로젝트">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ko="연락처">Contact</a></li>
+                <li><a href="assets/Resume.pdf" class="nav-link" target="_blank" data-en="Resume" data-ko="이력서">Resume</a></li>
             </ul>
+            <div class="nav-controls">
+                <!-- Language Toggle -->
+                <button class="toggle-btn lang-toggle" id="langToggle" aria-label="Language Toggle">
+                    <span class="lang-option active" data-lang="en">EN</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-option" data-lang="ko">KO</span>
+                </button>
+                <!-- Dark Mode Toggle -->
+                <button class="toggle-btn theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
