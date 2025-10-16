@@ -159,7 +159,24 @@ function switchLanguage(lang) {
     document.querySelector('.hero-greeting').textContent = t.greeting;
     document.querySelector('.hero-name').textContent = t.name;
     document.querySelector('.hero-location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${t.location}`;
-    document.querySelector('.hero-description').textContent = t.description;
+    
+    // Apply typing effect to hero description
+    const heroDescElement = document.querySelector('.hero-description');
+    if (heroDescElement) {
+        heroDescElement.textContent = '';
+        let i = 0;
+        const descText = t.description;
+        
+        function typeWriter() {
+            if (i < descText.length) {
+                heroDescElement.textContent += descText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 20);
+            }
+        }
+        
+        setTimeout(typeWriter, 200);
+    }
     
     const heroBtns = document.querySelectorAll('.hero-buttons .btn');
     if (heroBtns[0]) heroBtns[0].childNodes[0].textContent = t.resumeBtn + ' ';
@@ -427,25 +444,6 @@ skillCards.forEach((card, index) => {
     
     skillObserver.observe(card);
 });
-
-// ===== Type Writer Effect for Hero Section (Optional) =====
-const heroDescription = document.querySelector('.hero-description');
-if (heroDescription) {
-    const text = heroDescription.textContent;
-    heroDescription.textContent = '';
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < text.length) {
-            heroDescription.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 20);
-        }
-    }
-    
-    // Start typing effect after a short delay
-    setTimeout(typeWriter, 500);
-}
 
 // ===== Loading Animation =====
 window.addEventListener('load', () => {
