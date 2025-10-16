@@ -23,6 +23,9 @@ themeToggle.addEventListener('click', () => {
 const langToggle = document.querySelector('#langToggle');
 const langOptions = document.querySelectorAll('.lang-option');
 
+// Variable to track typing animation timeout
+let typingTimeout = null;
+
 // Translation data
 const translations = {
     en: {
@@ -163,6 +166,13 @@ function switchLanguage(lang) {
     // Apply typing effect to hero description
     const heroDescElement = document.querySelector('.hero-description');
     if (heroDescElement) {
+        // Cancel any existing typing animation
+        if (typingTimeout) {
+            clearTimeout(typingTimeout);
+            typingTimeout = null;
+        }
+        
+        // Immediately clear the text
         heroDescElement.textContent = '';
         let i = 0;
         const descText = t.description;
@@ -171,11 +181,11 @@ function switchLanguage(lang) {
             if (i < descText.length) {
                 heroDescElement.textContent += descText.charAt(i);
                 i++;
-                setTimeout(typeWriter, 20);
+                typingTimeout = setTimeout(typeWriter, 20);
             }
         }
         
-        setTimeout(typeWriter, 200);
+        typingTimeout = setTimeout(typeWriter, 200);
     }
     
     const heroBtns = document.querySelectorAll('.hero-buttons .btn');
