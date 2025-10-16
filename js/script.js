@@ -72,15 +72,13 @@ const translations = {
     }
 };
 
-// Check for saved language preference or default to English
-const currentLang = localStorage.getItem('language') || 'en';
+// Always start with English on page load (no language persistence)
+const currentLang = 'en';
 
-// Apply saved language after a short delay to ensure DOM is ready
-setTimeout(() => {
-    if (currentLang === 'ko') {
-        switchLanguage('ko');
-    }
-}, 100);
+// Ensure English is set as default
+langOptions.forEach(opt => {
+    opt.classList.toggle('active', opt.getAttribute('data-lang') === 'en');
+});
 
 langOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -157,8 +155,7 @@ function switchLanguage(lang) {
     const contactDesc = document.querySelector('.contact-description');
     if (contactDesc) contactDesc.textContent = t.contactDesc;
     
-    // Save language preference
-    localStorage.setItem('language', lang);
+    // Note: Language preference is NOT saved - always resets to EN on refresh
 }
 
 // ===== Mobile Menu Toggle =====
