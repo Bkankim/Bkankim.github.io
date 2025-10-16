@@ -121,6 +121,11 @@ langOptions.forEach(opt => {
     opt.classList.toggle('active', opt.getAttribute('data-lang') === 'en');
 });
 
+// Apply English translation immediately on page load
+setTimeout(() => {
+    switchLanguage('en');
+}, 100);
+
 langOptions.forEach(option => {
     option.addEventListener('click', () => {
         const lang = option.getAttribute('data-lang');
