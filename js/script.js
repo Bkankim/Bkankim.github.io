@@ -113,18 +113,18 @@ const translations = {
     }
 };
 
-// Always start with English on page load (no language persistence)
-const currentLang = 'en';
+// Always start with Korean on page load (no language persistence)
+const currentLang = 'ko';
 
-// Ensure English is set as default
+// Ensure Korean is set as default
 langOptions.forEach(opt => {
-    opt.classList.toggle('active', opt.getAttribute('data-lang') === 'en');
+    opt.classList.toggle('active', opt.getAttribute('data-lang') === 'ko');
 });
 
-// Apply English translation immediately on page load
+// Apply Korean translation immediately on page load
 setTimeout(() => {
-    console.log('Applying English translation...');
-    switchLanguage('en');
+    console.log('Applying Korean translation...');
+    switchLanguage('ko');
 }, 300);
 
 langOptions.forEach(option => {
