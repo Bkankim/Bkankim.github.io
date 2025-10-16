@@ -17,11 +17,11 @@
 /* ===== Dark Mode Variables ===== */
 body.dark-mode {
     --primary-color: #5aa3f0;
-    --secondary-color: #e8eaed;
+    --secondary-color: #ffffff;
     --accent-color: #ff6b6b;
     --text-dark: #e8eaed;
-    --text-light: #a0a0a0;
-    --bg-white: #1a1a1a;
+    --text-light: #b0b0b0;
+    --bg-white: #1e1e1e;
     --bg-light: #121212;
     --border-color: #333333;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
@@ -31,6 +31,60 @@ body.dark-mode {
 
 body.dark-mode .circle {
     background: linear-gradient(135deg, rgba(90, 163, 240, 0.08), rgba(232, 234, 237, 0.03));
+}
+
+/* ===== Dark Mode Section Backgrounds ===== */
+body.dark-mode .about {
+    background: #1e1e1e;
+}
+
+body.dark-mode .projects {
+    background: #1e1e1e;
+}
+
+body.dark-mode .skill-category {
+    background: #2a2a2a;
+}
+
+body.dark-mode .project-card {
+    background: #2a2a2a;
+    border-color: #404040;
+}
+
+body.dark-mode .contact-card {
+    background: #2a2a2a;
+}
+
+body.dark-mode .education-item {
+    background: #2a2a2a;
+}
+
+body.dark-mode .project-result {
+    background: #333333;
+}
+
+body.dark-mode .tech-badge {
+    background: #333333;
+}
+
+body.dark-mode .skill-tag {
+    background: #333333;
+}
+
+body.dark-mode .project-tag.completed {
+    background: #1e4620;
+    color: #7fd87f;
+}
+
+body.dark-mode .project-tag.in-progress {
+    background: #4a3c1a;
+    color: #ffd966;
+}
+
+/* ===== Dark Mode Footer ===== */
+body.dark-mode .footer {
+    background: #1a1a1a;
+    color: #e8eaed;
 }
 
 /* ===== Reset & Base ===== */
