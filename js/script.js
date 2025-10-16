@@ -123,8 +123,9 @@ langOptions.forEach(opt => {
 
 // Apply English translation immediately on page load
 setTimeout(() => {
+    console.log('Applying English translation...');
     switchLanguage('en');
-}, 100);
+}, 300);
 
 langOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -203,12 +204,16 @@ function switchLanguage(lang) {
     
     // Update Project cards
     const projectCards = document.querySelectorAll('.project-card');
+    console.log('Found project cards:', projectCards.length);
     if (projectCards.length >= 5) {
         // Project 1
         const p1Title = projectCards[0].querySelector('h3');
         const p1Desc = projectCards[0].querySelector('.project-description');
         const p1Result = projectCards[0].querySelector('.project-result');
-        if (p1Title) p1Title.textContent = t.project1Title;
+        if (p1Title) {
+            p1Title.textContent = t.project1Title;
+            console.log('Updated project 1 title to:', t.project1Title);
+        }
         if (p1Desc) p1Desc.textContent = t.project1Desc;
         if (p1Result) p1Result.innerHTML = '<i class="fas fa-chart-line"></i>\n                        <strong>Result:</strong> ' + t.project1Result;
         
