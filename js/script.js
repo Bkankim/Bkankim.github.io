@@ -63,7 +63,7 @@ const translations = {
         educationContent: "<strong>학사 학위</strong> - 정보보호학",
         bootcampTitle: "부트캠프",
         bootcampContent: "<strong>FastCampus AI 부트캠프</strong> - 14기",
-        stat1Title: "ML 프로젝트<br>완료",
+        stat1Title: "프로젝트<br>완료",
         stat2Title: "평균 성능<br>향상률",
         skillsTitle: "기술 스택",
         projectsTitle: "프로젝트",
