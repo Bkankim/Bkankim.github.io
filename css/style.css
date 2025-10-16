@@ -55,6 +55,14 @@ body.dark-mode .contact-card {
     background: #2a2a2a;
 }
 
+body.dark-mode .contact-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-card p {
+    color: #e8eaed;
+}
+
 body.dark-mode .education-item {
     background: #2a2a2a;
 }
