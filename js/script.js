@@ -45,7 +45,28 @@ const translations = {
         skillsTitle: "Technical Skills",
         projectsTitle: "Projects",
         contactTitle: "Get In Touch",
-        contactDesc: "I'm always interested in discussing new opportunities, innovative projects, and collaborative ventures in LLM/ML and AI development."
+        contactDesc: "I'm always interested in discussing new opportunities, innovative projects, and collaborative ventures in LLM/ML and AI development.",
+        
+        // Project Translations
+        project1Title: "Toss Ad Click Rate Prediction",
+        project1Desc: "Accurately predicted which users would click on which ads through statistical data analysis. Improved LogLoss and AP scores through Neural CTR model experiments based on large-scale log data.",
+        project1Result: "Score 0.33185 → 0.34814 achieved (Top 10% in private competition)",
+        
+        project2Title: "Dialogue Summarization Model",
+        project2Desc: "Developed a model to effectively generate summaries of Korean daily conversations. Preprocessed diverse Korean dialogue training data, and conducted LoRA/QLoRA-based fine-tuning with extensive augmentation and post-processing research.",
+        project2Result: "Rouge score improved by 30% <br>(36.12 → 47.31)",
+        
+        project3Title: "Movie Rating Prediction Service",
+        project3Desc: "Built a movie rating prediction service and MLOps pipeline using TMDB API based on user reviews. Fully automated from data collection through training, deployment, and monitoring.",
+        project3Result: "End-to-End CI/CD MLOps <br>Pipeline Implementation",
+        
+        project4Title: "Image Classification Model",
+        project4Desc: "Automated classification of scanned document images into 17 classes. Conducted extensive backbone experiments, TTA application, augmentation techniques, and post-processing research to improve image classification performance at the pre-OCR stage.",
+        project4Result: "F1-score improved by 470% <br>(0.1701 → 0.9689)",
+        
+        project5Title: "Real Estate Transaction Price Prediction",
+        project5Desc: "Trained on historical transaction data from public datasets to improve prediction accuracy for future real estate transaction prices and perform pattern analysis. Minimized prediction errors and enhanced model performance through Feature Engineering with 60+ features and K-Fold validation.",
+        project5Result: "RMSE improved by 58% <br>(48192 → 20006)"
     },
     ko: {
         greeting: "안녕하세요, 저는",
@@ -58,7 +79,6 @@ const translations = {
         aboutRole: "LLM/ML Engineer & Security Specialist",
         aboutDesc1: "저는 <strong>김병현</strong>이고, 정보보호 도메인의 AI 실무자입니다. 다양한 보안 분석과 네트워크 엔지니어링 경험을 바탕으로 데이터 기반 분석에 강점을 가지고 머신러닝 등 AI 전반의 과제를 해결합니다.",
         aboutDesc2: "현재 FastCampus AI 부트캠프 (14기)를 통해 MLOps, 머신러닝, 대규모 언어모델(LLM) 분야의 전문성을 강화하고 있으며, 프로덕션 레벨의 AI 시스템 구축과 엔드투엔드 ML 파이프라인을 마스터하고 있습니다.",
-        aboutDesc3: "LLM Agent 구축과 프로덕션 레벨의 AI 시스템 구축에 자신이 있고, 그 무궁무진한 가능성에 깊은 관심을 가지고 지속해서 연구하고 있습니다.",
         educationTitle: "학력",
         educationContent: "<strong>학사 학위</strong> - 정보보호학",
         bootcampTitle: "부트캠프",
@@ -68,7 +88,28 @@ const translations = {
         skillsTitle: "기술 스택",
         projectsTitle: "프로젝트",
         contactTitle: "연락하기",
-        contactDesc: "LLM/ML 및 AI 개발 분야에서 새로운 기회, 혁신적인 프로젝트, 협업 벤처에 대해 논의하는 것에 항상 관심이 있습니다."
+        contactDesc: "LLM/ML 및 AI 개발 분야에서 새로운 기회, 혁신적인 프로젝트, 협업 벤처에 대해 논의하는 것에 항상 관심이 있습니다.",
+        
+        // Project Translations
+        project1Title: "토스 광고 클릭률 예측",
+        project1Desc: "어떤 유저가 어떤 광고를 어떤 흐름으로 클릭한 것인지 그 확률을 통계 데이터 기반 분석을 통해 정확하게 예측. 대규모 로그 데이터 기반 Neural CTR 모델 실험으로 LogLoss 및 AP 점수 개선.",
+        project1Result: "Score 0.33185 → 0.34814 달성 (사설대회 상위 10%)",
+        
+        project2Title: "대화 요약 모델 개발",
+        project2Desc: "한국어 일상 대화 요약을 효과적으로 생성하는 모델 개발. 다양한 한국어 대화 학습 데이터를 전처리하고 LoRA/QLoRA 기반 미세조정 및 다양한 증강, 후처리 연구 및 수행.",
+        project2Result: "Rouge 점수 30% 향상 <br>(36.12 → 47.31)",
+        
+        project3Title: "영화 평점 예측 서비스",
+        project3Desc: "TMDB API를 활용한 사용자 리뷰 기반 영화 평점 예측 및 MLOps 파이프라인 구축. 데이터 수집부터 학습, 배포, 모니터링까지 완전 자동화.",
+        project3Result: "End-to-End CI/CD MLOps <br>파이프라인 구현",
+        
+        project4Title: "이미지 분류 모델 개발",
+        project4Desc: "스캔 문서 이미지의 유형 자동 분류 (17-class). 문서 OCR 전단계에서 이미지 분류 성능 향상을 위한 다양한 백본 실험 및 TTA 적용, 다양한 증강, 후처리 연구 및 수행.",
+        project4Result: "F1-score 470% 향상 <br>(0.1701 → 0.9689)",
+        
+        project5Title: "부동산 실거래가 예측",
+        project5Desc: "공공데이터 기반 과거 거래가를 학습시켜 미래 부동산 실거래가 예측 정확도 향상 및 패턴 분석 수행. 60여 개 특성을 활용한 Feature Engineering과 K-Fold 검증으로 예측 오차 최소화 및 모델 성능 향상.",
+        project5Result: "RMSE 58% 향상 <br>(48192 → 20006)"
     }
 };
 
@@ -154,6 +195,50 @@ function switchLanguage(lang) {
     
     const contactDesc = document.querySelector('.contact-description');
     if (contactDesc) contactDesc.textContent = t.contactDesc;
+    
+    // Update Project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    if (projectCards.length >= 5) {
+        // Project 1
+        const p1Title = projectCards[0].querySelector('h3');
+        const p1Desc = projectCards[0].querySelector('.project-description');
+        const p1Result = projectCards[0].querySelector('.project-result');
+        if (p1Title) p1Title.textContent = t.project1Title;
+        if (p1Desc) p1Desc.textContent = t.project1Desc;
+        if (p1Result) p1Result.innerHTML = '<i class="fas fa-chart-line"></i>\n                        <strong>Result:</strong> ' + t.project1Result;
+        
+        // Project 2
+        const p2Title = projectCards[1].querySelector('h3');
+        const p2Desc = projectCards[1].querySelector('.project-description');
+        const p2Result = projectCards[1].querySelector('.project-result');
+        if (p2Title) p2Title.textContent = t.project2Title;
+        if (p2Desc) p2Desc.textContent = t.project2Desc;
+        if (p2Result) p2Result.innerHTML = '<i class="fas fa-chart-line"></i>\n                        <strong>Result:</strong> ' + t.project2Result;
+        
+        // Project 3
+        const p3Title = projectCards[2].querySelector('h3');
+        const p3Desc = projectCards[2].querySelector('.project-description');
+        const p3Result = projectCards[2].querySelector('.project-result');
+        if (p3Title) p3Title.textContent = t.project3Title;
+        if (p3Desc) p3Desc.textContent = t.project3Desc;
+        if (p3Result) p3Result.innerHTML = '<i class="fas fa-check-circle"></i>\n                        <strong>Result:</strong> ' + t.project3Result;
+        
+        // Project 4
+        const p4Title = projectCards[3].querySelector('h3');
+        const p4Desc = projectCards[3].querySelector('.project-description');
+        const p4Result = projectCards[3].querySelector('.project-result');
+        if (p4Title) p4Title.textContent = t.project4Title;
+        if (p4Desc) p4Desc.textContent = t.project4Desc;
+        if (p4Result) p4Result.innerHTML = '<i class="fas fa-chart-line"></i>\n                        <strong>Result:</strong> ' + t.project4Result;
+        
+        // Project 5
+        const p5Title = projectCards[4].querySelector('h3');
+        const p5Desc = projectCards[4].querySelector('.project-description');
+        const p5Result = projectCards[4].querySelector('.project-result');
+        if (p5Title) p5Title.textContent = t.project5Title;
+        if (p5Desc) p5Desc.textContent = t.project5Desc;
+        if (p5Result) p5Result.innerHTML = '<i class="fas fa-chart-line"></i>\n                        <strong>Result:</strong> ' + t.project5Result;
+    }
     
     // Note: Language preference is NOT saved - always resets to EN on refresh
 }
