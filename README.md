@@ -160,11 +160,14 @@ jobs:
 
 ## 🌟 Key Projects Showcased
 
-1. **부동산 실거래가 예측** - ML Regression (58% RMSE improvement)
-2. **토스 광고 CTR 예측** - Click-Through Rate Prediction (In Progress)
-3. **대화 요약 모델** - Korean Dialogue Summarization (In Progress)
-4. **문서 이미지 분류** - Document Classification (470% F1-score improvement)
+1. **토스 광고 CTR 예측** - Private Top 10%, AP/Logloss 개선
+2. **대화 요약 모델** - Rouge 36.12 → 47.31 (+30%), QLoRA
+3. **문서 이미지 분류** - F1 0.1701 → 0.9689 (최고 0.9836)
+4. **부동산 실거래가 예측** - RMSE 48,192 → 20,006 (-58%)
 5. **영화 평점 예측 MLOps** - End-to-End CI/CD Pipeline
+6. **상업 마케팅 AI 에이전트** - 6-에이전트, 트렌드/카피/세그먼트/경쟁분석/리포트 자동화
+7. **BluePy 2.0** - 멀티플랫폼 보안 점검·자동 수정(170+ 규칙), 테스트 커버리지 60%+
+8. **과학 질의응답 IR 대회** - MAP/MRR 0.4242 → 0.8795/0.8818 (+107%)
 
 ## 📱 Responsive Breakpoints
 
