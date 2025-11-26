@@ -85,8 +85,8 @@ body.dark-mode .project-tag.completed {
 }
 
 body.dark-mode .project-tag.in-progress {
-    background: #4a3c1a;
-    color: #ffd966;
+    background: #1d3a4d;
+    color: #8ecaff;
 }
 
 /* ===== Dark Mode Footer ===== */
@@ -691,8 +691,8 @@ section {
 }
 
 .project-tag.in-progress {
-    background: #fff3cd;
-    color: #856404;
+    background: #e0f4ff;
+    color: #0b5cad;
 }
 
 .project-subtitle {
