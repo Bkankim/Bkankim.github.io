@@ -373,6 +373,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (p9Subtitle) p9Subtitle.textContent = t.project9Subtitle;
                 if (p9Desc) p9Desc.textContent = t.project9Desc;
                 if (p9Result) p9Result.innerHTML = '<i class="fas fa-book"></i>\n                        <strong>Result:</strong> ' + t.project9Result;
+
+                // Update project 9 link texts
+                const p9Links = projectCards[8].querySelectorAll('.project9-link');
+                p9Links.forEach(link => {
+                    const text = link.getAttribute(`data-${lang}`);
+                    const span = link.querySelector('span');
+                    if (text && span) span.textContent = text;
+                });
             }
         }
 
