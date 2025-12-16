@@ -38,4 +38,8 @@ docs/
 # Agents
 AGENTS.md
 CLAUDE.md
+GEMINI.md
 .claude/
+
+# etc.
+PROFILE_README.md

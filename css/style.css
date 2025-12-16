@@ -752,6 +752,34 @@ section {
     gap: 0.8rem;
 }
 
+/* Project Multiple Links */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-links .project-link {
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.project-links .project-link:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode .project-links .project-link {
+    background: #333333;
+}
+
+body.dark-mode .project-links .project-link:hover {
+    background: var(--primary-color);
+}
+
 /* ===== Contact Section ===== */
 .contact {
     background: var(--bg-light);
