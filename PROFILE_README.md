@@ -1,30 +1,42 @@
-# Hi, I'm Byeonghyeon Kim 👋
-LLM/ML Engineer with a security-first background. I build retrieval/agent systems, optimized models, and production-ready pipelines.
+# Hi, I'm Byeonghyeon Kim (김병현)
 
-## Quick Snapshot
-- CTR Private Top 10% (log-loss/AP boost, seq features + downsampling + tuning)
-- CV F1 0.1701 → 0.9689 (best 0.9836), ConvNeXt/Swin/EffNet + Hard Aug/TTA
-- IR (Science QA RAG) MAP/MRR 0.4242 → 0.8795 / 0.8818 (+107%), Solar + rank-graph refactor
-- Marketing AI Agent (6-agent, LangChain) — trend/copy/segment/review/competitor/strategy reports automated
-- BluePy 2.0 — multi-OS infra security scanner/remediator (170+ rules), GUI + rollback, 60%+ test coverage
+**AI & Security Specialist / Solopreneur** · Gyeonggi-do, South Korea
+
+CMT EYES에서 3년간 보안 관제·CERT 수행 후 AI로 전환. 15 AI 에이전트 오케스트레이션 기반 1인 AI 회사를 운영하며, 멀티 에이전트 파이프라인부터 자율 SaaS 팩토리까지 프로덕션 수준의 시스템을 구축합니다.
+
+## Products
+| Project | Stack | Status |
+|---------|-------|--------|
+| [Ourfolio](https://ourfolio.bkan.dev) | Next.js 16, Neon, Drizzle, BetterAuth | MVP |
+| [ASHD v2](https://github.com/Bkankim/ASHD) | Next.js 15, Supabase, Google Vision, LLM | MVP |
+| [BluePy 2.0](https://github.com/Bkankim/Bluepy) | Python, PySide6, Clean Architecture | In Progress |
+| Subari (수발이) | 수용자 가족 케어 서비스 | Planning |
+| Wukong (제천대성) | AI Autonomous Micro-SaaS Factory | Planning |
+
+## AI Infrastructure
+- **BK-HQ** — 15 AI 에이전트 · 4팀 · 31 스킬 · 19 자동화 훅 · 5 크루 워크플로우
+- **Smart Skill Chain** — Think · Plan · Search · Review · Brief 5종 통합
+- **SNS 자동화** — Threads · X · LinkedIn 동시 생성 파이프라인
+- **Agent Dashboard** — 실시간 에이전트 모니터링 (Docker, SSE)
+- **지식 복리 시스템** — 25+ 도메인, 100+ 문서, 자동 교차 참조
+
+## Competition Highlights
+| Competition | Result |
+|------------|--------|
+| 토스 광고 CTR 예측 | **상위 10%** |
+| 과학 QA IR (RAG) | MAP/MRR **+107%** |
+| CV 문서 분류 (17-class) | F1 **+470%** |
+| 대화 요약 (NLP) | Rouge **+30%** |
+| 부동산 실거래가 예측 | RMSE **-58%** |
 
 ## Tech Stack
-- LLM/Agents: LangChain, RAG (SQLite FTS5/BM25), GPT-4/4-turbo, Prompt/Toolchain design
-- ML: PyTorch, Transformers, LightGBM, Optuna, LoRA/QLoRA, TTA/Hard Aug, K-fold
-- MLOps: Docker, GitHub Actions, FastAPI, CI/CD, monitoring basics
-- Frontend: React, TypeScript, Vite
-- Security/Infra: FortiGate/FortiSIEM, WAF/IPS, Wireshark, Linux
-
-## Featured Projects
-- CTR Prediction: [toss-ad-click-prediction](https://github.com/Bkankim/toss-ad-click-prediction)
-- CV Classification (17-class): [CV-Competition](https://github.com/Bkankim/CV-Competition)
-- Science QA RAG: [informationretrieval-ir_ad_2](https://github.com/Bkankim/informationretrieval-ir_ad_2)
-- Marketing AI Agents: [langchainproject-new-langchainproject_2](https://github.com/Bkankim/langchainproject-new-langchainproject_2)
-- Infra Security Scanner: [BluePy](https://github.com/Bkankim/Bluepy)
-- Portfolio Site: [portfolio](https://github.com/Bkankim/portfolio)
+**LLM**: Multi-Agent Orchestration · Agentic Workflows · RAG · MCP · Claude Code Harness · Eval-Driven Dev
+**AI/ML**: PyTorch · Transformers · QLoRA · Codex · Ollama · Qwen · Gemma
+**Web**: Next.js · React · FastAPI · Tailwind · Drizzle · Supabase · Neon · Vercel
+**Infra**: Docker · GitHub Actions · Bash · FortiGate/SIEM · WAF/IPS
 
 ## Links
-- Portfolio: https://bkankim.github.io/
-- Resume: [assets/Resume.pdf](https://github.com/Bkankim/portfolio/blob/main/assets/Resume.pdf)
-- Email: chillbkan@gmail.com
-- LinkedIn: https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/
+- Portfolio: [bkankim.github.io](https://bkankim.github.io)
+- Threads: [@sweet_bkan](https://www.threads.com/@sweet_bkan)
+- LinkedIn: [Byeonghyeon Kim](https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/)
+- Email: official.bkan@gmail.com
