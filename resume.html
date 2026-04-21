@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byeonghyeon Kim - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            font-size: 9.5pt;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            max-height: 297mm;
+            padding: 18mm 20mm 14mm 20mm;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* ===== Header ===== */
+        .header {
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4a5ec7;
+        }
+
+        .header h1 {
+            font-size: 22pt;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #1a1a2e;
+            margin-bottom: 2px;
+        }
+
+        .header h1 span {
+            font-weight: 500;
+            font-size: 14pt;
+            color: #4a4a6a;
+            margin-left: 6px;
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 8.5pt;
+            color: #4a4a6a;
+            margin-top: 4px;
+        }
+
+        .header-contact a {
+            color: #4a5ec7;
+            text-decoration: none;
+        }
+
+        .header-contact .sep {
+            color: #ccc;
+        }
+
+        /* ===== Section ===== */
+        .section {
+            margin-bottom: 11px;
+        }
+
+        .section-title {
+            font-size: 10pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #4a5ec7;
+            border-bottom: 1px solid #e8e8f0;
+            padding-bottom: 3px;
+            margin-bottom: 7px;
+        }
+
+        /* ===== Summary ===== */
+        .summary {
+            font-size: 9.5pt;
+            color: #2a2a4a;
+            line-height: 1.5;
+        }
+
+        .summary strong {
+            color: #1a1a2e;
+        }
+
+        /* ===== Skills Grid ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 3px 10px;
+            font-size: 9pt;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: #1a1a2e;
+            white-space: nowrap;
+        }
+
+        .skill-value {
+            color: #3a3a5a;
+        }
+
+        /* ===== Experience ===== */
+        .exp-item {
+            margin-bottom: 8px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 9.5pt;
+            color: #1a1a2e;
+        }
+
+        .exp-company {
+            font-weight: 500;
+            color: #4a4a6a;
+        }
+
+        .exp-date {
+            font-size: 8.5pt;
+            color: #8888a8;
+            white-space: nowrap;
+        }
+
+        .exp-desc {
+            margin-top: 2px;
+            padding-left: 12px;
+        }
+
+        .exp-desc li {
+            margin-bottom: 1px;
+            color: #3a3a5a;
+            font-size: 9pt;
+        }
+
+        /* ===== Projects ===== */
+        .projects-note {
+            font-size: 8.5pt;
+            color: #4a5ec7;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .project-category {
+            margin-bottom: 5px;
+        }
+
+        .project-cat-label {
+            font-weight: 700;
+            font-size: 9pt;
+            color: #1a1a2e;
+            display: inline;
+        }
+
+        .project-cat-items {
+            font-size: 9pt;
+            color: #3a3a5a;
+            display: inline;
+        }
+
+        .project-highlight {
+            color: #4a5ec7;
+            font-weight: 600;
+        }
+
+        /* ===== Education & License ===== */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 20px;
+            font-size: 9pt;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .edu-name {
+            color: #1a1a2e;
+            font-weight: 600;
+        }
+
+        .edu-detail {
+            color: #4a4a6a;
+        }
+
+        .edu-year {
+            color: #8888a8;
+            font-size: 8.5pt;
+        }
+
+        .license-list {
+            font-size: 9pt;
+            color: #3a3a5a;
+        }
+
+        /* ===== Print ===== */
+        @media print {
+            body { background: #fff; }
+            .page {
+                margin: 0;
+                padding: 18mm 20mm 14mm 20mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Byeonghyeon Kim <span>(김병현)</span></h1>
+            <div class="header-contact">
+                <span>Gyeonggi-do, Korea</span>
+                <span class="sep">|</span>
+                <a href="mailto:official.bkan@gmail.com">official.bkan@gmail.com</a>
+                <span class="sep">|</span>
+                <span>(+82)10-4676-5884</span>
+            </div>
+            <div class="header-contact">
+                <a href="https://github.com/Bkankim">GitHub</a>
+                <span class="sep">|</span>
+                <a href="https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/">LinkedIn</a>
+                <span class="sep">|</span>
+                <a href="https://bkankim.github.io">Portfolio</a>
+                <span class="sep">|</span>
+                <a href="https://www.threads.com/@sweet_bkan">Threads</a>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="section">
+            <div class="section-title">Summary</div>
+            <div class="summary">
+                <strong>AI & Security Specialist / Solopreneur.</strong><br>
+                보안 관제·CERT 경험으로 네트워크/리눅스/보안 도메인 이해도 높음.
+                현재 15 AI 에이전트 오케스트레이션 기반 1인 AI 회사 운영 중.
+                19+ 프로젝트 수행, 2+ 프로덕트 출시. 좋은 포지션과 외주 프로젝트, 함께할 기회를 찾고 있습니다.
+            </div>
+        </section>
+
+        <!-- Core Skills -->
+        <section class="section">
+            <div class="section-title">Core Skills</div>
+            <div class="skills-grid">
+                <span class="skill-label">LLM</span>
+                <span class="skill-value">Multi-Agent Orchestration, Agentic Workflows, RAG Pipeline, Tool Use/MCP, Claude Code Harness, Prompt Engineering, Eval-Driven Dev</span>
+
+                <span class="skill-label">AI / ML</span>
+                <span class="skill-value">PyTorch, Transformers, QLoRA/LoRA, LightGBM, Codex, Ollama, Qwen, Gemma, Local LLM Fine-tuning, Feature Engineering</span>
+
+                <span class="skill-label">Web</span>
+                <span class="skill-value">Next.js, React, FastAPI, Tailwind CSS, Drizzle ORM, BetterAuth, LangChain, Vercel</span>
+
+                <span class="skill-label">DB</span>
+                <span class="skill-value">Supabase, Neon (Serverless Postgres), PostgreSQL, SQLite FTS5, MySQL</span>
+
+                <span class="skill-label">Infra</span>
+                <span class="skill-value">Docker, GitHub Actions, CI/CD, Bash, FortiGate/UTM, FortiSIEM, WAF/IPS, Wireshark</span>
+
+                <span class="skill-label">Language</span>
+                <span class="skill-value">Python, TypeScript, SQL, Bash</span>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+            <div class="section-title">Experience</div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-title">AI & Security Specialist / Solopreneur</span>
+                    <span class="exp-date">2025 – 현재</span>
+                </div>
+                <ul class="exp-desc">
+                    <li>Ourfolio (포트폴리오 SaaS) · ASHD v2 (보증서 관리) 2개 프로덕트 MVP 출시</li>
+                    <li>BK-HQ: CEO 1 + AI 에이전트 15명 4팀 오케스트레이션 시스템 설계·운영 (31 스킬, 19 자동화 훅, 5 크루)</li>
+                    <li>Smart Skill Chain 5종 (Think·Plan·Search·Review·Brief), SNS 자동화 파이프라인, Agent Dashboard 구축</li>
+                    <li>자동 복리 지식 축적 시스템: 25+ 레퍼런스 도메인, 100+ 지식 문서 자동 교차 참조</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-title">Security Monitoring Engineer, <span class="exp-company">CMT EYES</span></span>
+                    <span class="exp-date">2018.02 – 2020.05</span>
+                </div>
+                <ul class="exp-desc">
+                    <li>Fortinet 중심 WAF/IPS/UTM/SIEM 20+ 보안 장비, 50+ 고객사 원격 관제·분석, 월 1,000건+ 이벤트 대응</li>
+                    <li>이벤트 탐지 → 로그/패킷 분석 → 원인 식별 → 차단 → 정책 개선 → 보고 End-to-End CERT 프로세스 수행</li>
+                    <li>패킷/Raw 로그 기반 위협 패턴 분석으로 오탐/정탐률 평균 50%+ 개선</li>
+                    <li>반복 리포트 자동화 스크립트로 건당 작성 시간 30분 → 5분 단축</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-title">프랜차이즈 운영</span>
+                    <span class="exp-date">2020 – 2025</span>
+                </div>
+                <ul class="exp-desc">
+                    <li>POS 데이터 기반 수요 예측·재고 최적화·고객 패턴 분석 → AI/ML 커리어 전환 동기</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section class="section">
+            <div class="section-title">Key Projects</div>
+            <div class="projects-note">▸ 상세: bkankim.github.io</div>
+
+            <div class="project-category">
+                <span class="project-cat-label">Products: </span>
+                <span class="project-cat-items">
+                    <span class="project-highlight">Ourfolio</span> (Next.js 16+Neon+Drizzle, MVP) ·
+                    <span class="project-highlight">ASHD v2</span> (Next.js 15+Supabase+OCR, MVP) ·
+                    <span class="project-highlight">BluePy 2.0</span> (Python 보안 스캐너, 170+ 규칙) ·
+                    Subari (수용자 가족 케어, 기획) · Wukong (AI SaaS 팩토리, 기획)
+                </span>
+            </div>
+
+            <div class="project-category">
+                <span class="project-cat-label">AI Infra: </span>
+                <span class="project-cat-items">
+                    <span class="project-highlight">BK-HQ</span> (15 에이전트 4팀) ·
+                    Smart Skill Chain 5종 · SNS 자동화 · Agent Dashboard · 지식 복리 시스템 · 에이전트 팀 자동화
+                </span>
+            </div>
+
+            <div class="project-category">
+                <span class="project-cat-label">대회: </span>
+                <span class="project-cat-items">
+                    토스 CTR (<span class="project-highlight">상위 10%</span>) ·
+                    과학 QA IR (<span class="project-highlight">MAP +107%</span>) ·
+                    CV 문서 분류 (<span class="project-highlight">F1 +470%</span>) ·
+                    대화 요약 (Rouge +30%) · 부동산 예측 (RMSE -58%)
+                </span>
+            </div>
+
+            <div class="project-category">
+                <span class="project-cat-label">AI/ML: </span>
+                <span class="project-cat-items">
+                    마케팅 AI 멀티에이전트 · 영화 평점 MLOps (E2E CI/CD) · RAG 교육 콘텐츠
+                </span>
+            </div>
+        </section>
+
+        <!-- Education & License -->
+        <section class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <span><span class="edu-name">FastCampus AI 부트캠프</span> <span class="edu-detail">14기 (수료)</span></span>
+                    <span class="edu-year">2025.06 – 2026.01</span>
+                </div>
+                <div class="edu-item">
+                    <span><span class="edu-name">정보보호학 공학사</span> <span class="edu-detail">학점은행제</span></span>
+                    <span class="edu-year">2018</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">License</div>
+            <div class="license-list">
+                정보처리산업기사 (2017) · 네트워크관리사 2급 (2017) · 정보기기운용기능사 (2023)
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
