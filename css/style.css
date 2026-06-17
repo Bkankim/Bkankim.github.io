@@ -18,7 +18,7 @@
 
     --text-primary: #1a1a2e;
     --text-secondary: #4a4a6a;
-    --text-muted: #8888a8;
+    --text-muted: #5a5a7a;
 
     --surface-base: #f0f0f8;
     --surface-raised: rgba(255, 255, 255, 0.7);
@@ -53,7 +53,7 @@
 body.dark-mode {
     --text-primary: #e8e8f0;
     --text-secondary: #b0b0c8;
-    --text-muted: #7878a0;
+    --text-muted: #9a9ac0;
 
     --surface-base: #0c0c1d;
     --surface-raised: rgba(30, 30, 60, 0.7);
@@ -1159,4 +1159,33 @@ body.dark-mode .project-tag.planning {
     .blob-2 { width: 180px; height: 180px; }
     .blob-3 { width: 150px; height: 150px; }
     .blob-4 { display: none; }
+}
+/* ===== Case Study (featured project cards) ===== */
+.case-study {
+    margin-bottom: 1rem;
+    border-left: 2px solid var(--primary);
+    padding-left: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.case-study-item {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.case-study-item strong {
+    color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    .blob {
+        animation: none !important;
+    }
 }
