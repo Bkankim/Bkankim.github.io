@@ -5,25 +5,25 @@
 
 :root {
     /* dark (default) */
-    --bg: #0a0b0d;
-    --bg-soft: #101216;
-    --surface: #13161b;
-    --surface-2: #171b22;
-    --border: #222831;
-    --border-soft: #1a1f27;
+    --bg: #0a1426;
+    --bg-soft: #0e1a30;
+    --surface: #122038;
+    --surface-2: #182742;
+    --border: #243450;
+    --border-soft: #1a2840;
 
-    --text: #e8edf2;
-    --text-dim: #9aa5b1;
-    --text-mute: #5f6b78;
+    --text: #ece7db;
+    --text-dim: #a7afc1;
+    --text-mute: #707b90;
 
-    --primary: #34d399;
-    --primary-dim: #10b981;
-    --primary-strong: #6ee7b7;
-    --primary-glow: rgba(52, 211, 153, .15);
-    --primary-border: rgba(52, 211, 153, .25);
+    --primary: #e6a95c;
+    --primary-dim: #c98a3e;
+    --primary-strong: #f4c078;
+    --primary-glow: rgba(230, 169, 92, .16);
+    --primary-border: rgba(230, 169, 92, .30);
 
-    --term-bg: #0d0f13;
-    --term-bar: #171b22;
+    --term-bg: #0b1322;
+    --term-bar: #16223a;
 
     --shadow-card: 0 20px 50px rgba(0, 0, 0, .4);
     --shadow-soft: 0 24px 60px rgba(0, 0, 0, .45);
@@ -39,26 +39,26 @@
 }
 
 body.light {
-    --bg: #f6f7f9;
-    --bg-soft: #eef0f3;
+    --bg: #f4f1e8;
+    --bg-soft: #ece8dc;
     --surface: #ffffff;
-    --surface-2: #f1f3f6;
-    --border: #e2e6ec;
-    --border-soft: #e9edf2;
+    --surface-2: #f1eee4;
+    --border: #e6e0d2;
+    --border-soft: #ece7da;
 
-    --text: #14181d;
-    --text-dim: #4a5560;
-    --text-mute: #8b96a3;
+    --text: #0a1426;
+    --text-dim: #4a5468;
+    --text-mute: #8a93a5;
 
-    --primary: #059669;
-    --primary-dim: #10b981;
-    --primary-strong: #047857;
-    --primary-glow: rgba(5, 150, 105, .1);
-    --primary-border: rgba(5, 150, 105, .25);
+    --primary: #b0701f;
+    --primary-dim: #c98a3e;
+    --primary-strong: #8f540f;
+    --primary-glow: rgba(176, 112, 31, .12);
+    --primary-border: rgba(176, 112, 31, .28);
 
     /* terminal stays dark in both themes for authenticity */
-    --term-bg: #0d0f13;
-    --term-bar: #171b22;
+    --term-bg: #0b1322;
+    --term-bar: #16223a;
 
     --shadow-card: 0 16px 40px rgba(20, 30, 50, .1);
     --shadow-soft: 0 20px 50px rgba(20, 30, 50, .12);
@@ -79,7 +79,7 @@ body {
     transition: background .3s var(--ease), color .3s var(--ease);
 }
 
-::selection { background: var(--primary); color: #04110b; }
+::selection { background: var(--primary); color: #1a1206; }
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -92,7 +92,7 @@ img { max-width: 100%; display: block; }
     position: fixed; inset: 0; z-index: -2; pointer-events: none;
     background:
         radial-gradient(ellipse 52% 46% at 80% 16%, var(--primary-glow), transparent 62%),
-        linear-gradient(100deg, rgba(10,11,13,.96) 0%, rgba(10,11,13,.9) 46%, rgba(10,11,13,.6) 76%, rgba(10,11,13,.82) 100%),
+        linear-gradient(100deg, rgba(10,20,38,.96) 0%, rgba(10,20,38,.9) 46%, rgba(10,20,38,.6) 76%, rgba(10,20,38,.82) 100%),
         url("../assets/hero-bg.jpg") center 22% / cover no-repeat,
         var(--bg);
 }
@@ -105,7 +105,7 @@ body.light .hero-bg {
     background:
         linear-gradient(100deg, rgba(0,0,0,.93) 0%, rgba(0,0,0,.86) 46%, rgba(0,0,0,.55) 76%, rgba(0,0,0,.74) 100%),
         url("../assets/hero-bg.jpg") center 22% / cover no-repeat,
-        #0a0b0d;
+        #0a1426;
     filter: invert(1);
 }
 /* aurora would invert to magenta in light mode — hide it there */
@@ -236,7 +236,7 @@ body.light .theme-toggle .fa-moon { display: none; }
     display: inline-flex; align-items: center; gap: 9px; border: 1px solid transparent;
     transition: all .2s var(--ease);
 }
-.btn-primary { background: var(--primary); color: #04110b; }
+.btn-primary { background: var(--primary); color: #1a1206; }
 .btn-primary:hover { background: var(--primary-strong); transform: translateY(-2px); box-shadow: 0 10px 30px var(--primary-glow); }
 .btn-secondary { background: transparent; color: var(--text); border-color: var(--border); }
 .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
@@ -329,7 +329,7 @@ body.light .theme-toggle .fa-moon { display: none; }
     padding: 9px 18px; border-radius: 999px; cursor: pointer; transition: all .2s var(--ease);
 }
 .filter-btn:hover { border-color: var(--primary-border); color: var(--text); }
-.filter-btn.active { background: var(--primary); color: #04110b; border-color: var(--primary); font-weight: 600; }
+.filter-btn.active { background: var(--primary); color: #1a1206; border-color: var(--primary); font-weight: 600; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .project-card {
@@ -355,7 +355,7 @@ body.light .theme-toggle .fa-moon { display: none; }
 }
 .project-tag.completed { color: var(--primary); background: var(--primary-glow); border-color: var(--primary-border); }
 .project-tag.mvp { color: #60a5fa; background: rgba(96, 165, 250, .12); border-color: rgba(96, 165, 250, .28); }
-.project-tag.in-progress { color: #fbbf24; background: rgba(251, 191, 36, .12); border-color: rgba(251, 191, 36, .28); }
+.project-tag.in-progress { color: #4fb6ad; background: rgba(79, 182, 173, .12); border-color: rgba(79, 182, 173, .30); }
 .project-tag.planning { color: #a78bfa; background: rgba(167, 139, 250, .12); border-color: rgba(167, 139, 250, .28); }
 .project-subtitle { font-family: var(--mono); font-size: .78rem; color: var(--primary); margin-bottom: 14px; }
 .project-description { color: var(--text-dim); font-size: .94rem; margin-bottom: 18px; }
@@ -448,7 +448,7 @@ body.light .theme-toggle .fa-moon { display: none; }
 /* ===== Back to top (created in JS) ===== */
 #backToTop {
     position: fixed; bottom: 28px; right: 28px; width: 46px; height: 46px; border-radius: 50%;
-    background: var(--primary); color: #04110b; border: none; cursor: pointer; display: none;
+    background: var(--primary); color: #1a1206; border: none; cursor: pointer; display: none;
     align-items: center; justify-content: center; font-size: 1rem; z-index: 99;
     box-shadow: 0 8px 24px var(--primary-glow); transition: transform .2s var(--ease), background .2s;
 }
