@@ -1,143 +1,93 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #34d399; --primary-dim: #10b981; }
 
         .og-card {
             width: 1200px;
             height: 630px;
-            background: linear-gradient(135deg, #0c0c1d 0%, #1a1a3e 50%, #2a1a4a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
             overflow: hidden;
-            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 80px;
+            font-family: 'Inter', 'Pretendard Variable', sans-serif;
+            color: #e8edf2;
+            background:
+                radial-gradient(ellipse 60% 65% at 82% 18%, rgba(52, 211, 153, .20), transparent 60%),
+                linear-gradient(100deg, rgba(10, 11, 13, .97) 0%, rgba(10, 11, 13, .88) 48%, rgba(10, 11, 13, .6) 78%, rgba(10, 11, 13, .8) 100%),
+                url('assets/hero-bg.jpg') center 22% / cover no-repeat,
+                #0a0b0d;
         }
 
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.4;
+        .grid {
+            position: absolute; inset: 0; opacity: .4; z-index: 0;
+            background-image:
+                linear-gradient(#1a1f27 1px, transparent 1px),
+                linear-gradient(90deg, #1a1f27 1px, transparent 1px);
+            background-size: 54px 54px;
+            -webkit-mask-image: radial-gradient(ellipse 70% 70% at 30% 40%, #000 30%, transparent 75%);
         }
 
-        .blob-1 {
-            width: 500px;
-            height: 500px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            top: -150px;
-            left: -100px;
+        .logo {
+            position: absolute; top: 44px; left: 80px; z-index: 2;
+            font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 30px;
+            letter-spacing: -.02em;
+        }
+        .logo span { color: var(--primary); }
+
+        .url {
+            position: absolute; bottom: 40px; right: 80px; z-index: 2;
+            font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #5f6b78;
         }
 
-        .blob-2 {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            bottom: -120px;
-            right: -80px;
-        }
-
-        .blob-3 {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, #f093fb, #f5576c);
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 60px;
-        }
+        .content { position: relative; z-index: 2; }
 
         .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 20px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 9px 18px; margin-bottom: 26px;
+            background: rgba(52, 211, 153, .14);
+            border: 1px solid rgba(52, 211, 153, .3);
             border-radius: 100px;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 28px;
-            backdrop-filter: blur(8px);
+            color: var(--primary);
+            font-family: 'JetBrains Mono', monospace; font-size: 18px;
         }
+        .badge .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--primary); }
 
         .name {
-            font-size: 72px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #a78bfa 50%, #f093fb 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 16px;
+            font-size: 86px; font-weight: 800; letter-spacing: -.03em; line-height: 1.02;
+            color: #fff; margin-bottom: 14px;
         }
 
         .role {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 24px;
+            font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #9aa5b1;
+            margin-bottom: 40px;
         }
+        .role b { color: var(--primary); font-weight: 500; }
 
-        .stats {
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
+        .stats { display: flex; gap: 52px; }
         .stat-number {
-            font-size: 36px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-family: 'JetBrains Mono', monospace; font-size: 46px; font-weight: 700;
+            color: var(--primary); line-height: 1;
         }
-
-        .stat-label {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 500;
-            margin-top: 2px;
-        }
-
-        .url {
-            position: absolute;
-            bottom: 30px;
-            right: 40px;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.3);
-            font-weight: 500;
-            font-family: 'Inter', sans-serif;
-        }
+        .stat-label { font-size: 16px; color: #5f6b78; margin-top: 8px; }
     </style>
 </head>
 <body>
     <div class="og-card">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+        <div class="grid"></div>
+        <div class="logo">Bkan<span>.</span></div>
 
         <div class="content">
-            <div class="badge">bkankim.github.io</div>
+            <div class="badge"><span class="dot"></span>Available for full-time roles</div>
             <div class="name">Byeonghyeon Kim</div>
-            <div class="role">AI &amp; Security Engineer</div>
+            <div class="role">@Bkankim &nbsp;·&nbsp; AI &amp; Security Engineer</div>
             <div class="stats">
                 <div class="stat">
                     <div class="stat-number">22+</div>
@@ -151,8 +101,14 @@
                     <div class="stat-number">2+</div>
                     <div class="stat-label">Products</div>
                 </div>
+                <div class="stat">
+                    <div class="stat-number">3y</div>
+                    <div class="stat-label">Security / CERT</div>
+                </div>
             </div>
         </div>
+
+        <div class="url">bkankim.github.io</div>
     </div>
 </body>
 </html>
