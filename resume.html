@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Byeonghyeon Kim - Resume</title>
+    <title>Byeonghyeon Kim — Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
     <style>
-        @page {
-            size: A4;
-            margin: 0;
+        @page { size: A4; margin: 0; }
+
+        :root {
+            --ink: #14233f;        /* headings / name */
+            --navy: #0a2947;       /* section titles / rules */
+            --text: #2a3344;       /* body */
+            --text-2: #51607a;     /* secondary */
+            --muted: #7c869c;      /* dates */
+            --gold: #8a5410;       /* highlights / metrics (AA-safe on white) */
+            --link: #1b4f8c;
+            --rule: #dde1ea;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-            color: #1a1a2e;
+            color: var(--text);
             background: #fff;
-            font-size: 9.5pt;
-            line-height: 1.45;
+            font-size: 9pt;
+            line-height: 1.34;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -34,204 +38,71 @@
             width: 210mm;
             min-height: 297mm;
             max-height: 297mm;
-            padding: 18mm 20mm 14mm 20mm;
+            padding: 12mm 18mm 10mm 18mm;
             margin: 0 auto;
             overflow: hidden;
+            position: relative;
+        }
+        /* brand accent stripe */
+        .page::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+            background: linear-gradient(90deg, var(--navy) 0%, var(--navy) 62%, var(--gold) 62%, var(--gold) 100%);
         }
 
         /* ===== Header ===== */
-        .header {
-            margin-bottom: 14px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #4a5ec7;
-        }
-
-        .header h1 {
-            font-size: 22pt;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            color: #1a1a2e;
-            margin-bottom: 2px;
-        }
-
-        .header h1 span {
-            font-weight: 500;
-            font-size: 14pt;
-            color: #4a4a6a;
-            margin-left: 6px;
-        }
-
-        .header-contact {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            font-size: 8.5pt;
-            color: #4a4a6a;
-            margin-top: 4px;
-        }
-
-        .header-contact a {
-            color: #4a5ec7;
-            text-decoration: none;
-        }
-
-        .header-contact .sep {
-            color: #ccc;
-        }
+        .header { margin-bottom: 9px; padding-bottom: 6px; border-bottom: 2px solid var(--navy); }
+        .header h1 { font-size: 21pt; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 1px; }
+        .header h1 span { font-weight: 500; font-size: 13pt; color: var(--text-2); margin-left: 6px; }
+        .header .role { font-size: 9.5pt; font-weight: 700; color: var(--gold); letter-spacing: .2px; margin-bottom: 3px; }
+        .header-contact { display: flex; gap: 11px; flex-wrap: wrap; font-size: 8.4pt; color: var(--text-2); margin-top: 3px; }
+        .header-contact a { color: var(--link); text-decoration: none; }
+        .header-contact .sep { color: #c4c9d4; }
 
         /* ===== Section ===== */
-        .section {
-            margin-bottom: 11px;
-        }
-
+        .section { margin-bottom: 7px; }
         .section-title {
-            font-size: 10pt;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #4a5ec7;
-            border-bottom: 1px solid #e8e8f0;
-            padding-bottom: 3px;
-            margin-bottom: 7px;
+            font-size: 9.5pt; font-weight: 800; text-transform: uppercase; letter-spacing: 1.4px;
+            color: var(--navy); border-bottom: 1px solid var(--rule); padding-bottom: 2px; margin-bottom: 4px;
         }
 
         /* ===== Summary ===== */
-        .summary {
-            font-size: 9.5pt;
-            color: #2a2a4a;
-            line-height: 1.5;
-        }
+        .summary { font-size: 9pt; color: var(--text); line-height: 1.4; }
+        .summary strong { color: var(--ink); font-weight: 700; }
+        .summary .arc { color: var(--gold); font-weight: 700; }
 
-        .summary strong {
-            color: #1a1a2e;
-        }
-
-        /* ===== Skills Grid ===== */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 3px 10px;
-            font-size: 9pt;
-        }
-
-        .skill-label {
-            font-weight: 700;
-            color: #1a1a2e;
-            white-space: nowrap;
-        }
-
-        .skill-value {
-            color: #3a3a5a;
-        }
+        /* ===== Skills ===== */
+        .skills-grid { display: grid; grid-template-columns: 74px 1fr; gap: 2px 10px; font-size: 8.4pt; }
+        .skill-label { font-weight: 700; color: var(--navy); white-space: nowrap; }
+        .skill-value { color: var(--text); }
 
         /* ===== Experience ===== */
-        .exp-item {
-            margin-bottom: 8px;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .exp-title {
-            font-weight: 700;
-            font-size: 9.5pt;
-            color: #1a1a2e;
-        }
-
-        .exp-company {
-            font-weight: 500;
-            color: #4a4a6a;
-        }
-
-        .exp-date {
-            font-size: 8.5pt;
-            color: #8888a8;
-            white-space: nowrap;
-        }
-
-        .exp-desc {
-            margin-top: 2px;
-            padding-left: 12px;
-        }
-
-        .exp-desc li {
-            margin-bottom: 1px;
-            color: #3a3a5a;
-            font-size: 9pt;
-        }
+        .exp-item { margin-bottom: 5px; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+        .exp-title { font-weight: 700; font-size: 9.5pt; color: var(--ink); }
+        .exp-company { font-weight: 500; color: var(--text-2); }
+        .exp-date { font-size: 8.4pt; color: var(--muted); white-space: nowrap; }
+        .exp-desc { margin-top: 1px; padding-left: 13px; }
+        .exp-desc li { margin-bottom: 1px; color: var(--text); font-size: 8.5pt; }
+        .exp-desc li strong { color: var(--ink); font-weight: 700; }
+        .hl { color: var(--gold); font-weight: 700; }
 
         /* ===== Projects ===== */
-        .projects-note {
-            font-size: 8.5pt;
-            color: #4a5ec7;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-
-        .project-category {
-            margin-bottom: 5px;
-        }
-
-        .project-cat-label {
-            font-weight: 700;
-            font-size: 9pt;
-            color: #1a1a2e;
-            display: inline;
-        }
-
-        .project-cat-items {
-            font-size: 9pt;
-            color: #3a3a5a;
-            display: inline;
-        }
-
-        .project-highlight {
-            color: #4a5ec7;
-            font-weight: 600;
-        }
+        .projects-note { font-size: 8.4pt; color: var(--link); margin-bottom: 5px; font-weight: 600; }
+        .project-category { margin-bottom: 3px; }
+        .project-cat-label { font-weight: 700; font-size: 8.5pt; color: var(--navy); }
+        .project-cat-items { font-size: 8.5pt; color: var(--text); }
 
         /* ===== Education & License ===== */
-        .edu-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-            font-size: 9pt;
-        }
+        .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 20px; font-size: 8.5pt; }
+        .edu-item { display: flex; justify-content: space-between; }
+        .edu-name { color: var(--ink); font-weight: 600; }
+        .edu-detail { color: var(--text-2); }
+        .edu-year { color: var(--muted); font-size: 8.4pt; }
+        .license-list { font-size: 8.9pt; color: var(--text); }
 
-        .edu-item {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .edu-name {
-            color: #1a1a2e;
-            font-weight: 600;
-        }
-
-        .edu-detail {
-            color: #4a4a6a;
-        }
-
-        .edu-year {
-            color: #8888a8;
-            font-size: 8.5pt;
-        }
-
-        .license-list {
-            font-size: 9pt;
-            color: #3a3a5a;
-        }
-
-        /* ===== Print ===== */
         @media print {
             body { background: #fff; }
-            .page {
-                margin: 0;
-                padding: 18mm 20mm 14mm 20mm;
-            }
+            .page { margin: 0; }
         }
     </style>
 </head>
@@ -241,14 +112,14 @@
         <!-- Header -->
         <header class="header">
             <h1>Byeonghyeon Kim <span>(김병현)</span></h1>
+            <div class="role">AI &amp; Security Engineer</div>
             <div class="header-contact">
                 <span>Gyeonggi-do, South Korea</span>
                 <span class="sep">|</span>
                 <a href="mailto:official.bkan@gmail.com">official.bkan@gmail.com</a>
                 <span class="sep">|</span>
-                <span>(+82)10-4676-5884</span>
-            </div>
-            <div class="header-contact">
+                <span>(+82) 10-4676-5884</span>
+                <span class="sep">|</span>
                 <a href="https://github.com/Bkankim">GitHub</a>
                 <span class="sep">|</span>
                 <a href="https://bkankim.github.io">Portfolio</a>
@@ -261,10 +132,10 @@
         <section class="section">
             <div class="section-title">Summary</div>
             <div class="summary">
-                <strong>AI &amp; Security Engineer</strong> — 정보보호학·보안 관제 3년(CMT EYES)·FastCampus AI 부트캠프 수료.<br>
-                네트워크/리눅스/보안 도메인 기반으로 멀티에이전트 LLM 시스템·기업 AI 실무를 수행.
-                22+ 프로젝트 수행, 2+ 프로덕트 출시, 기업 AI 시스템 계약 실무 경험(솔로프리너 운영으로 끝까지 출시하는 실행력 증빙).
-                정규직 AI·보안·ML 엔지니어링 포지션을 찾고 있습니다.
+                <strong>AI &amp; Security Engineer.</strong> 정보보호학 기반 보안 관제·CERT 3년(CMT EYES) →
+                <span class="arc">FastCampus AI 부트캠프(14기)</span> 수료 → <span class="arc">기업 AI 시스템 계약 실무</span> → 솔로프리너로 이어지는 커리어.
+                네트워크·리눅스·보안 도메인 위에 멀티에이전트 LLM·RAG·프로덕션 시스템을 설계하고 끝까지 출시합니다.
+                22+ 프로젝트 수행, 2+ 프로덕트 MVP 출시. 정규직 <strong>AI·보안·ML 엔지니어링</strong> 포지션을 찾고 있습니다.
             </div>
         </section>
 
@@ -273,22 +144,22 @@
             <div class="section-title">Core Skills</div>
             <div class="skills-grid">
                 <span class="skill-label">LLM</span>
-                <span class="skill-value">Multi-Agent Orchestration, Agentic Workflows, RAG Pipeline, Tool Use/MCP, Claude Code Harness, Prompt Engineering, Eval-Driven Dev</span>
+                <span class="skill-value">Multi-Agent Orchestration · Agentic Workflows · RAG Pipeline · Tool Use/MCP · Claude Code Harness · Prompt Engineering · Eval-Driven Dev</span>
 
                 <span class="skill-label">AI / ML</span>
-                <span class="skill-value">PyTorch, Transformers, QLoRA/LoRA, LightGBM, Codex, Ollama, Qwen, Gemma, Local LLM Fine-tuning, Feature Engineering</span>
+                <span class="skill-value">PyTorch · Transformers · QLoRA/LoRA · LightGBM · Optuna · Local LLM Fine-tuning · Feature Engineering · Ollama · Qwen · Gemma</span>
 
                 <span class="skill-label">Web</span>
-                <span class="skill-value">Next.js, React, FastAPI, Tailwind CSS, Drizzle ORM, BetterAuth, LangChain, Vercel</span>
+                <span class="skill-value">Next.js · React · TypeScript · FastAPI · Tailwind CSS · Drizzle ORM · BetterAuth · LangChain · Vercel</span>
 
-                <span class="skill-label">DB</span>
-                <span class="skill-value">Supabase, Neon (Serverless Postgres), PostgreSQL, SQLite FTS5, MySQL</span>
+                <span class="skill-label">Data / DB</span>
+                <span class="skill-value">PostgreSQL · pgvector · Supabase · Neon · SQLite FTS5 · MySQL · Schema Design / Data Modeling</span>
 
-                <span class="skill-label">Infra</span>
-                <span class="skill-value">Docker, GitHub Actions, CI/CD, Bash, FortiGate/UTM, FortiSIEM, WAF/IPS, Wireshark</span>
+                <span class="skill-label">Infra / Sec</span>
+                <span class="skill-value">Docker · GitHub Actions · CI/CD · Bash · FortiGate/UTM · FortiSIEM · WAF/IPS · Wireshark · SOC / CERT</span>
 
                 <span class="skill-label">Language</span>
-                <span class="skill-value">Python, TypeScript, SQL, Bash</span>
+                <span class="skill-value">Python · TypeScript · SQL · Bash</span>
             </div>
         </section>
 
@@ -298,27 +169,27 @@
 
             <div class="exp-item">
                 <div class="exp-header">
-                    <span class="exp-title">AI & Security Engineer / Solopreneur</span>
+                    <span class="exp-title">AI &amp; Security Engineer / Solopreneur</span>
                     <span class="exp-date">2025 – 현재</span>
                 </div>
                 <ul class="exp-desc">
-                    <li>Ourfolio (포트폴리오 SaaS) · ASHD v2 (보증서 관리) 2개 프로덕트 MVP 출시</li>
-                    <li>BK-HQ: CEO 1 + AI 에이전트 15명 4팀 오케스트레이션 시스템 설계·운영 (31 스킬, 19 자동화 훅, 5 크루)</li>
-                    <li>Smart Skill Chain 5종 (Think·Plan·Search·Review·Brief), SNS 자동화 파이프라인, Agent Dashboard 구축</li>
-                    <li>자동 복리 지식 축적 시스템: 25+ 레퍼런스 도메인, 100+ 지식 문서 자동 교차 참조</li>
+                    <li><strong>Ourfolio</strong>(근거 기반 포트폴리오 SaaS)·<strong>ASHD v2</strong>(OCR+LLM 보증서 관리) 2개 프로덕트 MVP 출시, <strong>BluePy 2.0</strong>(보안 스캐너, 170+ 규칙) 개발</li>
+                    <li><strong>BK-HQ</strong>: AI 에이전트 15명·4팀 오케스트레이션 운영체제 설계·운영 (31 스킬, 19 자동화 훅, 5 크루)</li>
+                    <li>Smart Skill Chain 5종·SNS 자동화 파이프라인·Agent Dashboard·자동 복리 지식 시스템(25+ 도메인, 100+ 문서) 구축</li>
                 </ul>
             </div>
 
             <div class="exp-item">
                 <div class="exp-header">
-                    <span class="exp-title">Enterprise AI System — Contract <span class="exp-company">(기업 AI 시스템 — 계약)</span></span>
+                    <span class="exp-title">기업 AI 시스템 <span class="exp-company">— 계약 (Enterprise AI System, Contract)</span></span>
                     <span class="exp-date">2026</span>
                 </div>
                 <ul class="exp-desc">
-                    <li>Team AI long-term memory system: 3-tier (personal→team→org) memory with per-member permission gateway for multi-user isolation; daily-report automation deployed to the team.</li>
-                    <li>Enterprise integrated admin dashboard (demo): 13 modules derived from a single module registry, spec-driven (PRD/SDD/TDD), accessibility/dark-mode/responsive, 81 tests passing.</li>
-                    <li>Built and deployed team automation tools: meeting-minutes summarization, document conversion (docx/pdf/xlsx↔md), daily-report auto-generation.</li>
-                    <li>Evaluated Korean RAG embedding/reranker models (MTEB-ko leaderboard analysis) and vector-search libraries.</li>
+                    <li>통화상담·고객 데이터 통합 <strong>27-table 정규화 DB 스키마</strong> 설계 — 자연키·소프트삭제·변경이력 정책 + 불변식 명세, 외부검토 2회·적대적 코드검수 통과</li>
+                    <li><strong>온프렘 LLM 멀티에이전트 인프라</strong> — 외부 클라우드 없이 LLM 자체 서빙, 진행·검수 2-에이전트 자동 핸드오프, 재부팅 자동복구 상시 가동</li>
+                    <li><strong>팀 AI 장기기억 시스템</strong> — 개인→팀→전사 3단계 메모리 + 멤버별 권한 게이트웨이(다중 사용자 격리), 일일보고 자동화 팀 배포</li>
+                    <li><strong>통합 어드민 대시보드(데모)</strong> — 단일 모듈 레지스트리 파생 13모듈, 스펙주도(PRD/SDD/TDD), 접근성·다크모드·반응형, 테스트 <span class="hl">81건 통과</span></li>
+                    <li><strong>코드베이스 지식그래프</strong>(1,158노드/1,797관계/73커뮤니티) + 팀 자동화 도구(회의록 요약·문서변환·일일보고)·한국어 RAG 임베딩/리랭커 평가(MTEB-ko)</li>
                 </ul>
             </div>
 
@@ -328,10 +199,9 @@
                     <span class="exp-date">2018.02 – 2020.05</span>
                 </div>
                 <ul class="exp-desc">
-                    <li>Fortinet 중심 WAF/IPS/UTM/SIEM 20+ 보안 장비, 50+ 고객사 원격 관제·분석, 월 1,000건+ 이벤트 대응</li>
-                    <li>이벤트 탐지 → 로그/패킷 분석 → 원인 식별 → 차단 → 정책 개선 → 보고 End-to-End CERT 프로세스 수행</li>
-                    <li>패킷/Raw 로그 기반 위협 패턴 분석으로 오탐/정탐률 평균 50%+ 개선</li>
-                    <li>반복 리포트 자동화 스크립트로 건당 작성 시간 30분 → 5분 단축</li>
+                    <li>Fortinet 중심 WAF/IPS/UTM/SIEM 20+ 보안장비, 50+ 고객사 원격 관제·분석, 월 1,000건+ 이벤트 대응</li>
+                    <li>탐지 → 로그/패킷 분석 → 원인 식별 → 차단 → 정책 개선 → 보고 End-to-End CERT 프로세스 수행 (오탐/정탐률 <span class="hl">50%+ 개선</span>)</li>
+                    <li>반복 리포트 자동화 스크립트로 건당 작성 시간 <span class="hl">30분 → 5분</span> 단축</li>
                 </ul>
             </div>
 
@@ -348,42 +218,24 @@
 
         <!-- Key Projects -->
         <section class="section">
-            <div class="section-title">Key Projects</div>
+            <div class="section-title">Key Projects &amp; Competitions</div>
             <div class="projects-note">▸ 상세: bkankim.github.io</div>
 
             <div class="project-category">
-                <span class="project-cat-label">Products: </span>
-                <span class="project-cat-items">
-                    <span class="project-highlight">Ourfolio</span> (Next.js 16+Neon+Drizzle, MVP) ·
-                    <span class="project-highlight">ASHD v2</span> (Next.js 15+Supabase+OCR, MVP) ·
-                    <span class="project-highlight">BluePy 2.0</span> (Python 보안 스캐너, 170+ 규칙) ·
-                    Subari (수용자 가족 케어, 기획) · Wukong (AI SaaS 팩토리, 기획)
-                </span>
+                <span class="project-cat-label">Products · </span>
+                <span class="project-cat-items">Ourfolio (Next.js 16·Neon·Drizzle, MVP) · ASHD v2 (Next.js 15·Supabase·OCR, MVP) · BluePy 2.0 (Python 보안 스캐너) · Subari·Wukong (기획)</span>
             </div>
-
             <div class="project-category">
-                <span class="project-cat-label">AI Infra: </span>
-                <span class="project-cat-items">
-                    <span class="project-highlight">BK-HQ</span> (15 에이전트 4팀) ·
-                    Smart Skill Chain 5종 · SNS 자동화 · Agent Dashboard · 지식 복리 시스템 · 에이전트 팀 자동화
-                </span>
+                <span class="project-cat-label">AI Infra · </span>
+                <span class="project-cat-items">BK-HQ (15 에이전트·4팀) · Smart Skill Chain 5종 · SNS 자동화 · Agent Dashboard · 지식 복리 시스템</span>
             </div>
-
             <div class="project-category">
-                <span class="project-cat-label">대회: </span>
-                <span class="project-cat-items">
-                    토스 CTR (<span class="project-highlight">상위 10%</span>) ·
-                    과학 QA IR (<span class="project-highlight">MAP +107%</span>) ·
-                    CV 문서 분류 (<span class="project-highlight">F1 +470%</span>) ·
-                    대화 요약 (Rouge +30%) · 부동산 예측 (RMSE -58%)
-                </span>
+                <span class="project-cat-label">대회 · </span>
+                <span class="project-cat-items">토스 광고 CTR <span class="hl">상위 10%</span> · 과학 QA IR(RAG) MAP/MRR <span class="hl">+107%</span> · 문서 이미지 분류 F1 <span class="hl">+470%</span> · 대화 요약 Rouge +30% · 부동산 예측 RMSE -58%</span>
             </div>
-
             <div class="project-category">
-                <span class="project-cat-label">AI/ML: </span>
-                <span class="project-cat-items">
-                    마케팅 AI 멀티에이전트 · 영화 평점 MLOps (E2E CI/CD) · RAG 교육 콘텐츠
-                </span>
+                <span class="project-cat-label">AI/ML · </span>
+                <span class="project-cat-items">마케팅 AI 멀티에이전트 · 영화 평점 MLOps(E2E CI/CD) · LLM RAG 교육 콘텐츠</span>
             </div>
         </section>
 
