@@ -11,16 +11,15 @@ Professional portfolio website showcasing my journey from Information Security t
 
 ## ✨ Features
 
-- **Responsive Design**: Works seamlessly on all devices
-- **Smooth Animations**: Engaging scroll animations and transitions
-- **Interactive Elements**: 
-  - Floating background circles
-  - Horizontal scrolling skills section
-  - Drag-to-scroll functionality
-  - Hover effects on all interactive elements
-- **Modern UI/UX**: Clean, professional design with attention to detail
-- **Fast Loading**: Optimized for performance with no external dependencies
-- **SEO Friendly**: Proper meta tags and semantic HTML
+- **Dark / Light Mode**: Dark-first design with a persistent light variant
+- **Bilingual (EN/KO)**: Attribute-driven i18n with a language toggle
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- **Terminal/Code Aesthetic**: Monospace section labels and an interactive terminal block
+- **Scroll Animations**: Reveal-on-scroll, animated stat counters, and skill progress bars
+- **Project Filtering**: Category tabs (Products / AI Infra / AI/ML / Competitions) over a single data source
+- **Experience Timeline**: Vertical timeline of work, bootcamp, and education
+- **Fast Loading**: Pure HTML/CSS/JS, no build step, no framework
+- **SEO Friendly**: Proper meta tags, Open Graph, and semantic HTML
 
 ## 🛠️ Tech Stack
 
@@ -146,17 +145,12 @@ jobs:
 
 ## 🎨 Sections
 
-- **Home**: Hero section with introduction
-- **About**: Background, education, and statistics
-- **Skills**: Horizontal scrolling skill categories
-  - Languages
-  - AI/ML
-  - Frameworks & Libraries
-  - Databases
-  - LLM Agents
-  - Soft Skills
-- **Projects**: 5 featured projects with details and results
-- **Contact**: Email, GitHub, and LinkedIn links
+- **Home**: Hero with availability badge, intro, and social links
+- **About**: Narrative, interactive terminal block, and animated stat counters
+- **Skills**: Progress-bar categories (AI/ML, Web/Infra, Security) plus a tool tag cloud
+- **Projects**: Filterable cards rendered from `js/projects.js` (single source of truth)
+- **Experience**: Vertical timeline (chronological) — education, security, bootcamp, independent building, contract work
+- **Contact**: Email, GitHub, and Threads
 
 ## 🌟 Key Projects Showcased
 
@@ -194,7 +188,6 @@ Contributions, issues, and feature requests are welcome!
 
 - **Email**: chillbkan@gmail.com
 - **GitHub**: [@Bkankim](https://github.com/Bkankim)
-- **LinkedIn**: [Byeonghyeon Kim](https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/)
 
 ## 🙏 Acknowledgments
 
@@ -206,4 +199,4 @@ Contributions, issues, and feature requests are welcome!
 
 **Built with ❤️ and ☕ by Byeonghyeon Kim**
 
-*Last Updated: October 2025*
+*Last Updated: June 2026 — redesigned with a dark-first, terminal/code aesthetic*

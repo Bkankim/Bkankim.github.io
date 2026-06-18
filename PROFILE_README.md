@@ -38,5 +38,4 @@ CMT EYES에서 3년간 보안 관제·CERT 수행 후 AI로 전환. 15 AI 에이
 ## Links
 - Portfolio: [bkankim.github.io](https://bkankim.github.io)
 - Threads: [@sweet_bkan](https://www.threads.com/@sweet_bkan)
-- LinkedIn: [Byeonghyeon Kim](https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/)
 - Email: official.bkan@gmail.com

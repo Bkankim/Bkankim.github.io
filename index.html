@@ -22,36 +22,32 @@
     <meta name="twitter:title" content="Byeonghyeon Kim — AI &amp; Security Engineer">
     <meta name="twitter:description" content="Byeonghyeon Kim — AI &amp; Security Engineer. Security monitoring/CERT (3 yrs) + production AI systems. Open to full-time roles. 22+ projects · 15 AI agents · 2+ products shipped.">
     <meta name="twitter:image" content="https://bkankim.github.io/assets/OG.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-    <!-- Background Mesh Blobs -->
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        <div class="blob blob-4"></div>
-    </div>
+    <!-- Hero background -->
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">BK</div>
+            <a href="#home" class="nav-logo">Bkan<span>.</span></a>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-en="Home" data-ko="홈">Home</a></li>
-                <li><a href="#about" class="nav-link" data-en="About" data-ko="소개">About</a></li>
-                <li><a href="#skills" class="nav-link" data-en="Skills" data-ko="스킬">Skills</a></li>
-                <li><a href="#projects" class="nav-link" data-en="Projects" data-ko="프로젝트">Projects</a></li>
-                <li><a href="#contact" class="nav-link" data-en="Contact" data-ko="연락처">Contact</a></li>
-                <li><a href="assets/Resume.pdf" class="nav-link" target="_blank" data-en="Resume"
-                        data-ko="이력서">Resume</a></li>
+                <li><a href="#about" class="nav-link" data-en="about" data-ko="소개">about</a></li>
+                <li><a href="#skills" class="nav-link" data-en="skills" data-ko="스킬">skills</a></li>
+                <li><a href="#projects" class="nav-link" data-en="projects" data-ko="프로젝트">projects</a></li>
+                <li><a href="#experience" class="nav-link" data-en="experience" data-ko="경력">experience</a></li>
+                <li><a href="#contact" class="nav-link" data-en="contact" data-ko="연락처">contact</a></li>
             </ul>
             <div class="nav-controls">
+                <a href="assets/Resume.pdf" class="nav-resume" target="_blank" data-en="Resume" data-ko="이력서">Resume</a>
                 <button class="toggle-btn lang-toggle" id="langToggle" aria-label="Language Toggle">
                     <span class="lang-option active" data-lang="en">EN</span>
                     <span class="lang-divider">/</span>
@@ -61,225 +57,143 @@
                     <i class="fas fa-sun"></i>
                     <i class="fas fa-moon"></i>
                 </button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="hero-greeting">HELLO, I'M</p>
-            <h1 class="hero-name">Byeonghyeon Kim</h1>
-            <div class="hero-role">
-                <i class="fas fa-shield-alt"></i>
-                <span>AI &amp; Security Engineer</span>
-            </div>
-            <p class="hero-location">
-                <i class="fas fa-map-marker-alt"></i> Gyeonggi-do, South Korea
+    <!-- Hero -->
+    <header id="home" class="hero">
+        <div class="container hero-inner">
+            <span class="hero-badge">
+                <span class="badge-dot"></span>
+                <span data-en="Available for full-time roles" data-ko="정규직 포지션 구직 중">Available for full-time roles</span>
+            </span>
+            <h1 class="hero-name" data-en="Byeonghyeon Kim" data-ko="김병현">Byeonghyeon Kim</h1>
+            <p class="hero-handle">
+                <span class="mono">@Bkankim</span>
+                <span class="sep">·</span>
+                <span data-en="Gyeonggi-do, South Korea" data-ko="경기도, 대한민국">Gyeonggi-do, South Korea</span>
             </p>
-            <p class="hero-description"></p>
-            <div class="hero-buttons">
-                <a href="assets/Resume.pdf" class="btn btn-primary" target="_blank">
-                    My Resume <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    Contact Info <i class="fas fa-arrow-right"></i>
-                </a>
+            <p class="hero-lead" data-en="AI &amp; Security Engineer. <b>3 years</b> of security monitoring &amp; CERT, now shipping <b>production AI systems</b> — multi-agent orchestration, RAG pipelines, and ML engineering. Turning a security mindset into AI that ships." data-ko="AI·보안 엔지니어. 보안 관제·CERT <b>3년</b> 위에 <b>프로덕션 AI 시스템</b>을 만듭니다 — 멀티 에이전트 오케스트레이션, RAG 파이프라인, ML 엔지니어링. 보안의 시선을 끝까지 출시되는 AI로.">AI &amp; Security Engineer.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary"><span data-en="View Projects" data-ko="프로젝트 보기">View Projects</span> <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-ko="연락하기">Get in Touch</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Bkankim" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.threads.com/@sweet_bkan" target="_blank" rel="noopener" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                <a href="mailto:official.bkan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <a href="#about" class="hero-scroll" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section about">
+        <div class="container">
+            <span class="section-label" data-en="about" data-ko="소개">about</span>
+            <h2 class="section-title" data-en="Security mindset, AI execution" data-ko="보안의 시선으로, AI를 실행합니다">Security mindset, AI execution</h2>
+            <p class="section-subtitle" data-en="Not just prototypes — systems taken all the way to production." data-ko="프로토타입이 아니라, 끝까지 프로덕션으로 가져간 시스템.">Not just prototypes — systems taken all the way to production.</p>
+
+            <div class="about-grid">
+                <div class="about-body">
+                    <p data-en="I'm <strong>Byeonghyeon Kim</strong>, an AI &amp; Security Engineer based in South Korea. I built my foundation in Information Security with <strong>3 years</strong> of SOC monitoring and CERT incident response at CMT EYES." data-ko="저는 <strong>김병현</strong>, 대한민국에서 활동하는 AI·보안 엔지니어입니다. 정보보호학을 기반으로 CMT EYES에서 <strong>3년간</strong> 보안 관제(SOC)와 CERT 침해대응을 수행하며 기초를 다졌습니다.">I'm <strong>Byeonghyeon Kim</strong>, an AI &amp; Security Engineer based in South Korea.</p>
+                    <p data-en="After completing the FastCampus AI Bootcamp (14th cohort), I now build <strong>production-grade AI systems</strong> — from multi-agent orchestration and RAG pipelines to enterprise AI contract work and shipped products." data-ko="FastCampus AI 부트캠프(14기) 수료 후, 현재 <strong>프로덕션 수준의 AI 시스템</strong>을 만듭니다 — 멀티 에이전트 오케스트레이션과 RAG 파이프라인부터 기업 AI 계약 실무, 출시한 제품까지.">After completing the FastCampus AI Bootcamp, I now build production-grade AI systems.</p>
+                    <p data-en="I believe the best AI isn't the most complex — it's the one that <strong>reliably ships value</strong>. A threat-analyst's eye for edge cases makes my systems hold up under real load." data-ko="최고의 AI는 가장 복잡한 것이 아니라 <strong>안정적으로 가치를 전달하는</strong> 것이라 믿습니다. 엣지 케이스를 보는 위협 분석가의 시선이 실제 부하에서도 버티는 시스템을 만듭니다.">I believe the best AI isn't the most complex — it's the one that reliably ships value.</p>
+                </div>
+
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span class="tl tl-r"></span><span class="tl tl-y"></span><span class="tl tl-g"></span>
+                        <span class="terminal-title">bkan@portfolio: ~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div><span class="c">$</span> <span class="cmd">whoami</span></div>
+                        <div class="o">&gt; byeonghyeon_kim</div>
+                        <div class="spacer"></div>
+                        <div><span class="c">$</span> <span class="cmd">cat stack.txt</span></div>
+                        <div class="o">&gt; python, typescript, pytorch,</div>
+                        <div class="o">&gt; langchain, next.js, docker</div>
+                        <div class="spacer"></div>
+                        <div><span class="c">$</span> <span class="cmd">echo $FOCUS</span></div>
+                        <div class="o">&gt; multi-agent · rag · security</div>
+                        <div class="spacer"></div>
+                        <div><span class="c">$</span> <span class="cmd">echo $STATUS</span></div>
+                        <div class="o">&gt; building AI that ships<span class="cursor">▋</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats" id="stats">
+                <div class="stat"><div class="stat-n" data-count="22" data-suffix="+" data-stat="projects">22+</div><div class="stat-t" data-en="Projects Built" data-ko="프로젝트 수행">Projects Built</div></div>
+                <div class="stat"><div class="stat-n" data-count="15" data-suffix="">15</div><div class="stat-t" data-en="AI Agents" data-ko="AI 에이전트">AI Agents</div></div>
+                <div class="stat"><div class="stat-n" data-count="2" data-suffix="+">2+</div><div class="stat-t" data-en="Products Shipped" data-ko="프로덕트 출시">Products Shipped</div></div>
+                <div class="stat"><div class="stat-n" data-count="3" data-suffix="y">3y</div><div class="stat-t" data-en="Security / CERT" data-ko="보안 관제 / CERT">Security / CERT</div></div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Skills -->
+    <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-            <p class="section-subtitle">보안 전문가의 시선으로 AI 솔루션을 만듭니다</p>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3 class="about-role">AI &amp; Security Engineer</h3>
-                    <p class="about-description">
-                        I'm <strong>Byeonghyeon Kim</strong>, an AI &amp; security engineer with a foundation in
-                        Information Security. With 3 years of experience in security monitoring and CERT at CMT EYES,
-                        I bring a data-driven problem-solving approach to building AI-powered systems.
-                    <p class="about-description">
-                        Completed FastCampus AI Bootcamp (14th cohort), now building production-grade AI systems.
-                    </p>
-                    <p class="about-description">
-                        From multi-agent orchestration to enterprise AI contract work and shipped products — proof I take systems all the way to production. Primarily seeking full-time AI/Security engineering roles; open to freelance.
-                    </p>
+            <span class="section-label" data-en="skills" data-ko="스킬">skills</span>
+            <h2 class="section-title" data-en="Tech stack" data-ko="기술 스택">Tech stack</h2>
+            <p class="section-subtitle" data-en="The tools I work with across AI, web, and security." data-ko="AI·웹·보안을 아우르는 기술 스택.">The tools I work with across AI, web, and security.</p>
 
-                    <div class="about-education">
-                        <div class="education-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <div class="education-content">
-                                <h4>Experience</h4>
-                                <p><strong>CMT EYES</strong><br>보안 관제 · CERT (3년)</p>
-                            </div>
-                        </div>
-                        <div class="education-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div class="education-content">
-                                <h4>Education</h4>
-                                <p><strong>학사 학위</strong><br>정보보호학</p>
-                            </div>
-                        </div>
-                        <div class="education-item">
-                            <i class="fas fa-code"></i>
-                            <div class="education-content">
-                                <h4>Bootcamp</h4>
-                                <p><strong>FastCampus AI 부트캠프</strong><br>14기 (수료)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>22+</h3>
-                            <p>Projects<br>Built</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>15</h3>
-                            <p>AI<br>Agents</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>2+</h3>
-                            <p>Products<br>Shipped</p>
-                        </div>
-                    </div>
+            <div class="skill-cats">
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i><span data-en="AI / ML" data-ko="AI / ML">AI / ML</span></h3>
+                    <div class="bar-row"><div class="bar-top"><span>LLM / RAG</span><span class="pct">93%</span></div><div class="bar"><i data-w="93"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span data-en="Multi-Agent Orchestration" data-ko="멀티 에이전트">Multi-Agent Orchestration</span><span class="pct">90%</span></div><div class="bar"><i data-w="90"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span>PyTorch / Transformers</span><span class="pct">85%</span></div><div class="bar"><i data-w="85"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span data-en="Fine-tuning (LoRA/QLoRA)" data-ko="파인튜닝 (LoRA/QLoRA)">Fine-tuning (LoRA/QLoRA)</span><span class="pct">82%</span></div><div class="bar"><i data-w="82"></i></div></div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i><span data-en="Web / Infra" data-ko="웹 / 인프라">Web / Infra</span></h3>
+                    <div class="bar-row"><div class="bar-top"><span>Next.js / React</span><span class="pct">88%</span></div><div class="bar"><i data-w="88"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span>TypeScript</span><span class="pct">85%</span></div><div class="bar"><i data-w="85"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span>Docker / CI/CD</span><span class="pct">80%</span></div><div class="bar"><i data-w="80"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span>PostgreSQL / Supabase</span><span class="pct">78%</span></div><div class="bar"><i data-w="78"></i></div></div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-halved"></i><span data-en="Security" data-ko="보안">Security</span></h3>
+                    <div class="bar-row"><div class="bar-top"><span data-en="Security Monitoring (SOC)" data-ko="보안 관제 (SOC)">Security Monitoring (SOC)</span><span class="pct">90%</span></div><div class="bar"><i data-w="90"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span data-en="CERT / Incident Response" data-ko="CERT / 침해대응">CERT / Incident Response</span><span class="pct">88%</span></div><div class="bar"><i data-w="88"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span data-en="Threat / Log Analysis" data-ko="위협 / 로그 분석">Threat / Log Analysis</span><span class="pct">85%</span></div><div class="bar"><i data-w="85"></i></div></div>
+                    <div class="bar-row"><div class="bar-top"><span data-en="Information Security" data-ko="정보보호">Information Security</span><span class="pct">83%</span></div><div class="bar"><i data-w="83"></i></div></div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
-            <p class="section-subtitle">AI/ML과 보안을 아우르는 기술 스택</p>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Bash</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>AI / ML</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">LLM</span>
-                        <span class="skill-tag">RAG</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">CV</span>
-                        <span class="skill-tag">Recsys</span>
-                        <span class="skill-tag">Feature Engineering</span>
-                        <span class="skill-tag">Codex</span>
-                        <span class="skill-tag">Ollama</span>
-                        <span class="skill-tag">Qwen</span>
-                        <span class="skill-tag">Gemma</span>
-                        <span class="skill-tag">Local LLM Fine-tuning</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">LightGBM</span>
-                        <span class="skill-tag">Optuna</span>
-                        <span class="skill-tag">LoRA/QLoRA</span>
-                        <span class="skill-tag">Albumentations</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">Claude Code</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Web & Infra</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Drizzle ORM</span>
-                        <span class="skill-tag">BetterAuth</span>
-                        <span class="skill-tag">Vercel</span>
-                        <span class="skill-tag">GitHub Actions</span>
-                        <span class="skill-tag">Docker</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Supabase</span>
-                        <span class="skill-tag">Neon</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">SQLite FTS5</span>
-                        <span class="skill-tag">MySQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>LLM</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Multi-Agent Orchestration</span>
-                        <span class="skill-tag">Agentic Workflows</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">Tool Use / MCP</span>
-                        <span class="skill-tag">RAG Pipeline</span>
-                        <span class="skill-tag">Claude Code Harness</span>
-                        <span class="skill-tag">Eval-Driven Dev</span>
-                        <span class="skill-tag">Context Optimization</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">AI Orchestration</span>
-                        <span class="skill-tag">Documentation</span>
-                        <span class="skill-tag">Rapid Prototyping</span>
-                        <span class="skill-tag">Solopreneurship</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-halved" style="margin-right:0.4rem;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"></i>Security</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Security Monitoring (SOC)</span>
-                        <span class="skill-tag">CERT / Incident Response</span>
-                        <span class="skill-tag">Threat Analysis</span>
-                        <span class="skill-tag">Log Analysis</span>
-                        <span class="skill-tag">Information Security</span>
-                    </div>
+            <div class="skill-tools">
+                <span class="tools-label" data-en="Also working with" data-ko="그 외 사용 기술">Also working with</span>
+                <div class="tools-tags">
+                    <span class="tool-tag">Python</span><span class="tool-tag">SQL</span><span class="tool-tag">Bash</span>
+                    <span class="tool-tag">LangChain</span><span class="tool-tag">FastAPI</span><span class="tool-tag">LightGBM</span>
+                    <span class="tool-tag">Optuna</span><span class="tool-tag">Claude Code</span><span class="tool-tag">MCP</span>
+                    <span class="tool-tag">Ollama</span><span class="tool-tag">Local LLM</span><span class="tool-tag">Tailwind</span>
+                    <span class="tool-tag">Drizzle ORM</span><span class="tool-tag">Vercel</span><span class="tool-tag">GitHub Actions</span>
+                    <span class="tool-tag">Neon</span><span class="tool-tag">SQLite FTS5</span><span class="tool-tag">Prompt Engineering</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects -->
+    <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-            <p class="section-subtitle">AI 프로덕트부터 인프라, ML 엔지니어링까지</p>
+            <span class="section-label" data-en="projects" data-ko="프로젝트">projects</span>
+            <h2 class="section-title" data-en="What I've built" data-ko="만들어 온 것들">What I've built</h2>
+            <p class="section-subtitle" data-en="AI products, infrastructure, and ML engineering — shipped." data-ko="AI 프로덕트부터 인프라, ML 엔지니어링까지 — 출시했습니다.">AI products, infrastructure, and ML engineering — shipped.</p>
 
-            <!-- Tab Filter -->
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all" data-en="All" data-ko="전체">전체</button>
-                <button class="filter-btn" data-filter="product" data-en="Products" data-ko="프로덕트">프로덕트</button>
-                <button class="filter-btn" data-filter="infra" data-en="AI Infra" data-ko="AI 인프라">AI 인프라</button>
+                <button class="filter-btn active" data-filter="all" data-en="All" data-ko="전체">All</button>
+                <button class="filter-btn" data-filter="product" data-en="Products" data-ko="프로덕트">Products</button>
+                <button class="filter-btn" data-filter="infra" data-en="AI Infra" data-ko="AI 인프라">AI Infra</button>
                 <button class="filter-btn" data-filter="aiml" data-en="AI/ML" data-ko="AI/ML">AI/ML</button>
-                <button class="filter-btn" data-filter="competition" data-en="Competitions" data-ko="대회">대회</button>
+                <button class="filter-btn" data-filter="competition" data-en="Competitions" data-ko="대회">Competitions</button>
             </div>
 
             <div class="projects-grid" id="projects-grid"></div>
@@ -287,59 +201,93 @@
                 <ol>
                     <li><strong>Ourfolio</strong> — Evidence-Based Portfolio Platform (SaaS MVP)</li>
                     <li><strong>ASHD v2</strong> — Warranty &amp; A/S Management Service (OCR + LLM)</li>
-                    <li><strong>Subari</strong> — Inmate Family Care Service (Planning)</li>
-                    <li><strong>Wukong</strong> — AI Autonomous Micro-SaaS Factory (Planning)</li>
                     <li><strong>BluePy 2.0</strong> — Infra Security Scanner, 170+ rules</li>
                     <li><strong>BK-HQ</strong> — Solo AI Company Operating System, 15 agents</li>
-                    <li><strong>Smart Skill Chain</strong> — AI Agent Skill Chain, 5 skills</li>
-                    <li><strong>SNS Automation Pipeline</strong> — Multi-Platform Content Auto-Generation</li>
-                    <li><strong>Agent Dashboard</strong> — Real-time Agent Monitoring Dashboard</li>
-                    <li><strong>Knowledge Compound System</strong> — Self-Built Memory &amp; Intelligence System</li>
-                    <li><strong>Agent Team Automation</strong> — Automated Service Development Pipeline</li>
-                    <li><strong>Commerce Marketing AI Agent</strong> — Custom Multi-Agent System</li>
-                    <li><strong>Toss Ad Click Rate Prediction</strong> — CTR Prediction (Top 10%)</li>
-                    <li><strong>Dialogue Summarization Model</strong> — Rouge +30%</li>
-                    <li><strong>Science QA IR Competition</strong> — RAG MAP/MRR +107%</li>
-                    <li><strong>Movie Rating Prediction Service</strong> — End-to-End MLOps Pipeline</li>
-                    <li><strong>Image Classification Model</strong> — F1-score +470%</li>
-                    <li><strong>Real Estate Price Prediction</strong> — RMSE -58%</li>
-                    <li><strong>LLM-based RAG Educational Content</strong> — Technical Content Creation</li>
                     <li><strong>On-Prem LLM Multi-Agent Infra</strong> — Enterprise AI System (Contract, 2026)</li>
-                    <li><strong>Integrated Data Platform Schema</strong> — Enterprise AI System (Contract)</li>
-                    <li><strong>Codebase Knowledge Graph</strong> — Enterprise AI System (Contract)</li>
                 </ol>
             </noscript>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Experience -->
+    <section id="experience" class="section experience">
         <div class="container">
-            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-            <p class="contact-description">
-                I'm always interested in discussing new opportunities, innovative projects,
-                and collaborative ventures in AI development.
-            </p>
+            <span class="section-label" data-en="experience" data-ko="경력">experience</span>
+            <h2 class="section-title" data-en="Where I've worked" data-ko="걸어온 길">Where I've worked</h2>
+            <p class="section-subtitle" data-en="From security operations to shipping production AI." data-ko="보안 관제에서 프로덕션 AI 출시까지.">From security operations to shipping production AI.</p>
+
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-marker"><i class="fas fa-user-graduate"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-period mono" data-en="Bachelor's Degree" data-ko="학사 학위">Bachelor's Degree</span>
+                        <h3 data-en="Information Security" data-ko="정보보호학">Information Security</h3>
+                        <p class="tl-role" data-en="B.S." data-ko="학사">B.S.</p>
+                        <p data-en="Academic foundation in information security — cryptography, network security, and systems thinking that underpins how I reason about AI safety and reliability." data-ko="정보보호 학문적 기초 — 암호학, 네트워크 보안, 그리고 AI 안전성·신뢰성을 사고하는 토대가 된 시스템적 사고.">Academic foundation in information security — cryptography, network security, and systems thinking.</p>
+                        <div class="tl-tags"><span class="tool-tag">Cryptography</span><span class="tool-tag">Network Security</span></div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-marker"><i class="fas fa-shield-halved"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-period mono" data-en="3 Years · CMT EYES" data-ko="3년 · CMT EYES">3 Years · CMT EYES</span>
+                        <h3 data-en="Security Monitoring &amp; CERT" data-ko="보안 관제 &amp; CERT">Security Monitoring &amp; CERT</h3>
+                        <p class="tl-role" data-en="Security Analyst" data-ko="보안 관제 분석가">Security Analyst</p>
+                        <p data-en="3 years of SOC monitoring and CERT incident response — threat analysis, log analysis, and a data-driven approach to detecting and containing real-world security incidents." data-ko="3년간 보안 관제(SOC)와 CERT 침해대응 — 위협 분석, 로그 분석, 실제 보안 사고를 탐지하고 대응하는 데이터 기반 접근.">3 years of SOC monitoring and CERT incident response — threat analysis, log analysis, real-world incidents.</p>
+                        <div class="tl-tags"><span class="tool-tag">SOC</span><span class="tool-tag">CERT</span><span class="tool-tag">Threat Analysis</span><span class="tool-tag">Log Analysis</span></div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-marker"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-period mono" data-en="AI Bootcamp · 14th Cohort" data-ko="AI 부트캠프 · 14기">AI Bootcamp · 14th Cohort</span>
+                        <h3 data-en="FastCampus AI Bootcamp" data-ko="FastCampus AI 부트캠프">FastCampus AI Bootcamp</h3>
+                        <p class="tl-role" data-en="Completed" data-ko="수료">Completed</p>
+                        <p data-en="Intensive applied ML training — competitions in CTR prediction (Top 10%), dialogue summarization (+30% Rouge), document classification (F1 +470%), and RAG-based IR (MAP/MRR +107%)." data-ko="실전 ML 집중 훈련 — CTR 예측(상위 10%), 대화 요약(Rouge +30%), 문서 분류(F1 +470%), RAG 기반 IR(MAP/MRR +107%) 대회 수행.">Intensive applied ML training across CTR prediction, summarization, classification, and RAG-based IR competitions.</p>
+                        <div class="tl-tags"><span class="tool-tag">PyTorch</span><span class="tool-tag">LightGBM</span><span class="tool-tag">QLoRA</span><span class="tool-tag">MLOps</span></div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-marker"><i class="fas fa-rocket"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-period mono" data-en="2025 — Present · Solo" data-ko="2025 — 현재 · 솔로">2025 — Present · Solo</span>
+                        <h3 data-en="Independent AI Builder" data-ko="독립 AI 빌더">Independent AI Builder</h3>
+                        <p class="tl-role" data-en="Founder / Engineer" data-ko="창업자 / 엔지니어">Founder / Engineer</p>
+                        <p data-en="Shipping AI products end to end — Ourfolio (evidence-based portfolio SaaS), ASHD v2 (OCR + LLM), and BK-HQ, a 15-agent operating system that runs a solo AI company." data-ko="AI 제품을 끝까지 출시 — Ourfolio(근거 기반 포트폴리오 SaaS), ASHD v2(OCR + LLM), 그리고 1인 AI 회사를 운영하는 15-에이전트 운영체제 BK-HQ.">Shipping AI products end to end — Ourfolio, ASHD v2, and the 15-agent BK-HQ operating system.</p>
+                        <div class="tl-tags"><span class="tool-tag">Next.js</span><span class="tool-tag">RAG</span><span class="tool-tag">Multi-Agent</span><span class="tool-tag">SaaS</span></div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-marker"><i class="fas fa-server"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-period mono" data-en="2026 · Contract" data-ko="2026 · 계약">2026 · Contract</span>
+                        <h3 data-en="Enterprise AI Systems" data-ko="기업 AI 시스템 실무">Enterprise AI Systems</h3>
+                        <p class="tl-role" data-en="AI Engineer (Contract)" data-ko="AI 엔지니어 (계약)">AI Engineer (Contract)</p>
+                        <p data-en="Built on-prem LLM multi-agent infrastructure (self-hosted, zero external cloud), a 27-table integrated data platform schema, and a codebase knowledge graph — all validated by adversarial review." data-ko="온프렘 LLM 멀티에이전트 인프라(외부 클라우드 0 자체 서빙), 27-table 통합 데이터 플랫폼 스키마, 코드베이스 지식그래프를 구축 — 모두 적대적 리뷰로 검증.">Built on-prem LLM multi-agent infrastructure, an integrated data platform schema, and a codebase knowledge graph.</p>
+                        <div class="tl-tags"><span class="tool-tag">Self-Hosted LLM</span><span class="tool-tag">Multi-Agent</span><span class="tool-tag">PostgreSQL</span><span class="tool-tag">Knowledge Graph</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <span class="section-label" data-en="contact" data-ko="연락처">contact</span>
+            <h2 class="section-title" data-en="Let's build something" data-ko="함께 만들어요">Let's build something</h2>
+            <p class="section-subtitle" data-en="Open to full-time AI/Security roles and freelance work. Always happy to talk." data-ko="정규직 AI·보안 포지션과 외주에 열려 있습니다. 언제든 환영합니다.">Open to full-time AI/Security roles and freelance work. Always happy to talk.</p>
+
+            <a href="mailto:official.bkan@gmail.com" class="contact-email mono">official.bkan@gmail.com</a>
+
             <div class="contact-links">
-                <a href="mailto:official.bkan@gmail.com" class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>official.bkan@gmail.com</p>
-                </a>
-                <a href="https://github.com/Bkankim" class="contact-card" target="_blank">
+                <a href="https://github.com/Bkankim" class="contact-card" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>github.com/Bkankim</p>
+                    <div><h3>GitHub</h3><p>github.com/Bkankim</p></div>
                 </a>
-                <a href="https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/" class="contact-card" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Byeonghyeon Kim</p>
-                </a>
-                <a href="https://www.threads.com/@sweet_bkan" class="contact-card" target="_blank">
+                <a href="https://www.threads.com/@sweet_bkan" class="contact-card" target="_blank" rel="noopener">
                     <i class="fab fa-threads"></i>
-                    <h3>Threads</h3>
-                    <p>@sweet_bkan</p>
+                    <div><h3>Threads</h3><p>@sweet_bkan</p></div>
                 </a>
             </div>
         </div>
@@ -347,13 +295,15 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="https://github.com/Bkankim" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/byeonghyeon-kim-7a1838389/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.threads.com/@sweet_bkan" target="_blank" aria-label="Threads"><i class="fab fa-threads"></i></a>
-            <a href="mailto:official.bkan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="container footer-inner">
+            <span class="footer-logo mono">Bkan<span>.</span></span>
+            <p class="mono">© 2026 Byeonghyeon Kim · <span data-en="built as a static site, deployed on GitHub Pages" data-ko="정적 사이트로 빌드, GitHub Pages 배포">built as a static site, deployed on GitHub Pages</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/Bkankim" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.threads.com/@sweet_bkan" target="_blank" rel="noopener" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                <a href="mailto:official.bkan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-        <p>&copy; 2026 Byeonghyeon Kim. All rights reserved.</p>
     </footer>
 
     <script src="js/projects.js"></script>

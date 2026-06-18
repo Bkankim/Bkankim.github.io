@@ -609,8 +609,11 @@ window.renderProjects = function (lang) {
         }
     });
     // Derive Projects count stat from PROJECTS array length
-    var statH3 = document.querySelector('.about-stats .stat-item:first-child h3');
-    if (statH3) statH3.textContent = window.PROJECTS.length + '+';
+    var statEl = document.querySelector('[data-stat="projects"]');
+    if (statEl) {
+        statEl.setAttribute('data-count', window.PROJECTS.length);
+        statEl.textContent = window.PROJECTS.length + '+';
+    }
 };
 
 /* ===== Initial render (ko default matches script.js init) ===== */
