@@ -14,7 +14,7 @@
 
     --text: #ece7db;
     --text-dim: #a7afc1;
-    --text-mute: #707b90;
+    --text-mute: #7c8699;
 
     --primary: #e6a95c;
     --primary-dim: #c98a3e;
@@ -48,13 +48,13 @@ body.light {
 
     --text: #0a1426;
     --text-dim: #4a5468;
-    --text-mute: #8a93a5;
+    --text-mute: #5d6675;
 
-    --primary: #b0701f;
+    --primary: #965a0c;
     --primary-dim: #c98a3e;
-    --primary-strong: #8f540f;
-    --primary-glow: rgba(176, 112, 31, .12);
-    --primary-border: rgba(176, 112, 31, .28);
+    --primary-strong: #74470a;
+    --primary-glow: rgba(150, 90, 12, .12);
+    --primary-border: rgba(150, 90, 12, .30);
 
     /* terminal stays dark in both themes for authenticity */
     --term-bg: #0b1322;
