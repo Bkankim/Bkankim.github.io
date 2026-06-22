@@ -113,48 +113,6 @@ window.PROJECTS = [
         }
     },
     {
-        id: 'ent-data-schema',
-        category: 'infra',
-        featured: false,
-        status: 'completed',
-        resultIcon: 'fa-database',
-        tags: ['PostgreSQL', 'Schema Design', 'Normalization', 'Data Modeling', 'ADR'],
-        links: [],
-        en: {
-            title: 'Integrated Data Platform Schema',
-            subtitle: 'Enterprise AI System (Contract)',
-            desc: 'Designed a normalized 27-table schema integrating call and customer data. Specified natural-key, soft-delete, and change-history policies with an invariant checklist, validated by two external reviews and adversarial code review.',
-            result: '23 → 27-table normalized design + invariant spec, passed adversarial review (design stage)'
-        },
-        ko: {
-            title: '통합 데이터 플랫폼 스키마',
-            subtitle: '기업 AI 시스템 실무 (계약)',
-            desc: '통화·고객 데이터를 통합하는 27-table 정규화 스키마 설계. 자연키·소프트삭제·변경이력 정책과 불변식 체크리스트를 명세하고 외부 검토 2회·적대적 코드 검수로 검증.',
-            result: '23 → 27 테이블 정규화 설계 + 불변식 명세, 적대적 리뷰 통과 (설계 단계)'
-        }
-    },
-    {
-        id: 'ent-knowledge-graph',
-        category: 'aiml',
-        featured: false,
-        status: 'completed',
-        resultIcon: 'fa-diagram-project',
-        tags: ['Knowledge Graph', 'Community Detection', 'Graph Analysis', 'Python'],
-        links: [],
-        en: {
-            title: 'Codebase Knowledge Graph',
-            subtitle: 'Enterprise AI System (Contract)',
-            desc: 'Built a pipeline turning an internal codebase into a queryable knowledge graph. Integrated five projects and fixed four graph-integrity bugs (hyperedge contamination, phantom edges, noise nodes, stale state) via adversarial re-review.',
-            result: '1,158 nodes / 1,797 relationships / 73 communities integrated graph, 4 integrity bugs fixed'
-        },
-        ko: {
-            title: '코드베이스 지식그래프',
-            subtitle: '기업 AI 시스템 실무 (계약)',
-            desc: '사내 코드베이스를 질의 가능한 지식그래프로 변환하는 파이프라인 구축. 5개 프로젝트를 통합하고 적대적 재검토로 그래프 정합성 버그 4건(하이퍼엣지 오염·팬텀 엣지·노이즈 노드·stale 상태)을 수정.',
-            result: '1,158노드 / 1,797관계 / 73커뮤니티 통합 그래프, 정합성 버그 4건 수정'
-        }
-    },
-    {
         id: 'ent-team-memory',
         category: 'infra',
         featured: false,
@@ -218,27 +176,6 @@ window.PROJECTS = [
         }
     },
     {
-        id: 'i4',
-        category: 'infra',
-        featured: false,
-        status: 'active',
-        resultIcon: 'fa-check-circle',
-        tags: ['Docker', 'Node.js', 'SQLite', 'SSE', 'React'],
-        links: [],
-        en: {
-            title: 'Agent Dashboard',
-            subtitle: 'Real-time Agent Monitoring Dashboard',
-            desc: 'Personal orchestration tool visualizing execution timelines, task completion rates, and error tracking for 15 AI agents in real-time. SSE streaming with 30-day event retention.',
-            result: '15 agents real-time tracking, 30-day event retention'
-        },
-        ko: {
-            title: 'Agent Dashboard',
-            subtitle: '실시간 에이전트 모니터링 대시보드',
-            desc: '15개 AI 에이전트의 실행 타임라인, 작업 완료율, 에러 추적을 실시간 시각화하는 개인 오케스트레이션 도구. SSE 스트리밍 기반 30일 이벤트 보존.',
-            result: '15 에이전트 실시간 추적, 30일 이벤트 보존'
-        }
-    },
-    {
         id: 'c3',
         category: 'competition',
         featured: true,
@@ -278,27 +215,6 @@ window.PROJECTS = [
             subtitle: 'Document Type Classification',
             desc: '스캔 문서 이미지의 유형 자동 분류 (17-class). 문서 OCR 전단계에서 이미지 분류 성능 향상을 위한 다양한 백본 실험 및 TTA 적용.',
             result: 'F1-score 470% 향상 <br>(0.1701 → 0.9689)'
-        }
-    },
-    {
-        id: 'c5',
-        category: 'competition',
-        featured: false,
-        status: 'completed',
-        resultIcon: 'fa-chart-line',
-        tags: ['Python', 'LightGBM', 'XGBoost', 'Scikit-learn'],
-        links: [{ kind: 'github', href: 'https://github.com/Bkankim/upstageailab-ml-competition-ml-2', label: 'View Code' }],
-        en: {
-            title: 'Real Estate Price Prediction',
-            subtitle: 'ML Regression',
-            desc: 'Prediction model on historical public transaction data. Minimized errors through feature engineering (60+ features) and K-Fold validation.',
-            result: 'RMSE improved by 58% <br>(48192 → 20006)'
-        },
-        ko: {
-            title: '부동산 실거래가 예측',
-            subtitle: 'ML Regression',
-            desc: '공공데이터 기반 과거 거래가를 학습시켜 미래 부동산 실거래가 예측 정확도 향상 및 패턴 분석. 60여 개 특성을 활용한 Feature Engineering과 K-Fold 검증.',
-            result: 'RMSE 58% 향상 <br>(48192 → 20006)'
         }
     },
     {
@@ -422,48 +338,6 @@ window.PROJECTS = [
             result: '개요서 + 교육자료 PDF + 실습 Jupyter 노트북 완성'
         }
     },
-    {
-        id: 'p3',
-        category: 'product',
-        featured: false,
-        status: 'planning',
-        resultIcon: 'fa-search',
-        tags: ['Market Research', 'Moat Strategy', 'Competitor Analysis'],
-        links: [],
-        en: {
-            title: 'Subari',
-            subtitle: 'Inmate Family Care Service',
-            desc: 'Comprehensive care platform for families of inmates. Starting with letter delivery as MVP, building moats with facility-specific regulation DB, emotional letter archive, and anonymous community. First production-level project.',
-            result: 'Market research complete, moat strategy designed, Rollapalooza 5:0'
-        },
-        ko: {
-            title: 'Subari (수발이)',
-            subtitle: '수용자 가족 케어 서비스',
-            desc: '교정시설 수용자 가족을 위한 종합 케어 플랫폼. MVP는 편지 배달 서비스로 시작, 시설별 규정 DB·감정 편지 아카이브·익명 커뮤니티로 해자 구축. 첫 프로덕션 레벨 프로젝트.',
-            result: '시장조사 완료, 해자 전략 설계, 롤라팔루자 5:0'
-        }
-    },
-    {
-        id: 'p4',
-        category: 'product',
-        featured: false,
-        status: 'planning',
-        resultIcon: 'fa-drafting-compass',
-        tags: ['Claude Code', 'Neon MCP', 'Vercel', 'Polar API', 'Cloudflare API'],
-        links: [],
-        en: {
-            title: 'Wukong',
-            subtitle: 'AI Autonomous Micro-SaaS Factory',
-            desc: 'Mitosis Engine that auto-generates, measures, and evolves micro-SaaS products. Genetic algorithm optimization of product portfolio based on 12-gene business blueprint.',
-            result: 'Mitosis Engine v2 spec finalized, Phase 0 pending'
-        },
-        ko: {
-            title: 'Wukong (제천대성)',
-            subtitle: 'AI 자율 마이크로 SaaS 팩토리',
-            desc: 'AI가 마이크로 SaaS를 자동 생성·측정·진화시키는 Mitosis Engine. 12-gene 비즈니스 블루프린트 기반 유전 알고리즘으로 제품 포트폴리오 자동 최적화.',
-            result: 'Mitosis Engine v2 스펙 확정, Phase 0 대기'
-        }
-    }
 ];
 
 /* ===== Renderer ===== */
