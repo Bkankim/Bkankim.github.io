@@ -167,11 +167,11 @@ body.light .hero-bg::after { opacity: .02; }
 }
 .nav-controls { display: flex; align-items: center; gap: 12px; }
 .nav-resume {
-    font-family: var(--mono); font-size: .82rem; color: var(--text); font-weight: 500;
-    padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    font-family: var(--mono); font-size: .82rem; color: #1a1206; font-weight: 700;
+    padding: 8px 16px; background: var(--primary); border: 1px solid var(--primary); border-radius: var(--radius-sm);
     transition: all .2s var(--ease);
 }
-.nav-resume:hover { border-color: var(--primary); color: var(--primary); }
+.nav-resume:hover { background: var(--primary-strong); border-color: var(--primary-strong); color: #1a1206; transform: translateY(-1px); box-shadow: 0 8px 24px var(--primary-glow); }
 
 .toggle-btn {
     background: var(--surface); border: 1px solid var(--border); color: var(--text-dim);

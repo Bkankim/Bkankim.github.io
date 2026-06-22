@@ -155,6 +155,48 @@ window.PROJECTS = [
         }
     },
     {
+        id: 'ent-team-memory',
+        category: 'infra',
+        featured: false,
+        status: 'completed',
+        resultIcon: 'fa-brain',
+        tags: ['Memory System', 'RBAC Gateway', 'Multi-Tenant', 'Daily Report Automation'],
+        links: [],
+        en: {
+            title: 'Team AI Long-term Memory',
+            subtitle: 'Enterprise AI System (Contract)',
+            desc: 'A three-tier memory system (personal -> team -> org) with a per-member permission gateway for multi-user isolation, plus automated daily reporting, deployed to the team.',
+            result: '3-tier memory + permission gateway + automated daily reports, deployed to team'
+        },
+        ko: {
+            title: '팀 AI 장기기억 시스템',
+            subtitle: '기업 AI 시스템 실무 (계약)',
+            desc: '개인 → 팀 → 전사 3단계 메모리에 멤버별 권한 게이트웨이(다중 사용자 격리)를 더하고, 일일보고 자동화를 팀에 배포.',
+            result: '3단계 메모리 + 권한 게이트웨이 + 일일보고 자동화 팀 배포'
+        }
+    },
+    {
+        id: 'ent-admin-dashboard',
+        category: 'infra',
+        featured: false,
+        status: 'completed',
+        resultIcon: 'fa-table-columns',
+        tags: ['Spec-Driven (PRD/SDD/TDD)', '13 Modules', 'Accessibility', 'Responsive'],
+        links: [],
+        en: {
+            title: 'Unified Admin Dashboard',
+            subtitle: 'Enterprise AI System (Contract)',
+            desc: 'A 13-module admin derived from a single module registry. Spec-driven (PRD/SDD/TDD) with accessibility, dark mode, and responsive layout.',
+            result: '13 modules from one registry, 81 tests passing (demo)'
+        },
+        ko: {
+            title: '통합 어드민 대시보드 (데모)',
+            subtitle: '기업 AI 시스템 실무 (계약)',
+            desc: '단일 모듈 레지스트리에서 파생한 13모듈 어드민. 스펙주도(PRD/SDD/TDD)로 접근성·다크모드·반응형까지 구현.',
+            result: '레지스트리 파생 13모듈, 테스트 81건 통과 (데모)'
+        }
+    },
+    {
         id: 'i1',
         category: 'infra',
         featured: false,
@@ -349,7 +391,7 @@ window.PROJECTS = [
         featured: false,
         status: 'completed',
         resultIcon: 'fa-book',
-        tags: ['RAG', 'BM25', 'FAISS', 'Upstage Solar', 'Python'],
+        tags: ['RAG', 'BM25', 'FAISS', 'Upstage Solar', 'MTEB-ko', 'Python'],
         links: [
             {
                 kind: 'pdf',
