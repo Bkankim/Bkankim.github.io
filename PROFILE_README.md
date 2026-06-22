@@ -14,11 +14,11 @@ CMT EYES에서 3년간 보안 관제·CERT 수행 후 AI로 전환. 15 AI 에이
 | Wukong (제천대성) | AI Autonomous Micro-SaaS Factory | Planning |
 
 ## AI Infrastructure
-- **BK-HQ** — 15 AI 에이전트 · 4팀 · 31 스킬 · 19 자동화 훅 · 5 크루 워크플로우
-- **Smart Skill Chain** — Think · Plan · Search · Review · Brief 5종 통합
-- **SNS 자동화** — Threads · X · LinkedIn 동시 생성 파이프라인
-- **Agent Dashboard** — 실시간 에이전트 모니터링 (Docker, SSE)
-- **지식 복리 시스템** — 25+ 도메인, 100+ 문서, 자동 교차 참조
+- **BK-HQ** - 15 AI 에이전트 · 4팀 · 31 스킬 · 19 자동화 훅 · 5 크루 워크플로우
+- **Smart Skill Chain** - Think · Plan · Search · Review · Brief 5종 통합
+- **SNS 자동화** - Threads · X · LinkedIn 동시 생성 파이프라인
+- **Agent Dashboard** - 실시간 에이전트 모니터링 (Docker, SSE)
+- **지식 복리 시스템** - 25+ 도메인, 100+ 문서, 자동 교차 참조
 
 ## Competition Highlights
 | Competition | Result |

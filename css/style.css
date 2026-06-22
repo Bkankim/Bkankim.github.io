@@ -1,5 +1,5 @@
 /* ===================================================================
-   Byeonghyeon Kim — Portfolio
+   Byeonghyeon Kim - Portfolio
    Dark-first, terminal/code aesthetic. Light variant via body.light
    =================================================================== */
 
@@ -98,7 +98,7 @@ img { max-width: 100%; display: block; }
 }
 /* light theme: SAME photo, color-inverted (white bg, dark formulas).
    Trick: a dark veil is used here because filter:invert flips it to a
-   light veil — keeping the left text column clean while formulas stay
+   light veil - keeping the left text column clean while formulas stay
    faint on the right. .hero-bg is a decorative layer (no content), so
    inverting it never touches page text. */
 body.light .hero-bg {
@@ -108,7 +108,7 @@ body.light .hero-bg {
         #0a1426;
     filter: invert(1);
 }
-/* aurora would invert to magenta in light mode — hide it there */
+/* aurora would invert to magenta in light mode - hide it there */
 body.light .hero-bg::before { display: none; }
 /* drifting aurora glow */
 .hero-bg::before {
@@ -304,11 +304,20 @@ body.light .theme-toggle .fa-moon { display: none; }
 .skill-cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .skill-category h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 11px; }
 .skill-category h3 i { color: var(--primary); font-size: 1.1rem; }
-.bar-row { margin-bottom: 18px; }
-.bar-top { display: flex; justify-content: space-between; font-size: .88rem; margin-bottom: 8px; color: var(--text-dim); }
-.bar-top .pct { font-family: var(--mono); color: var(--primary); }
-.bar { height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
-.bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--primary-dim), var(--primary-strong)); border-radius: 99px; transition: width 1s var(--ease); }
+/* Skill evidence tiers (dots = where it was used, not self-rating) */
+.tier-legend { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 28px; font-size: .72rem; color: var(--text-mute); font-family: var(--mono); }
+.tier-legend > span { display: inline-flex; align-items: center; gap: 7px; }
+.skill-row { margin-bottom: 18px; }
+.skill-row .row-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.skill-row .skill-name { font-size: .9rem; color: var(--text-dim); }
+.tier-dots { display: inline-flex; gap: 4px; flex-shrink: 0; }
+.tier-dots i { display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--surface-2); }
+.tier-dots.t1 i:nth-child(-n+1),
+.tier-dots.t2 i:nth-child(-n+2),
+.tier-dots.t3 i:nth-child(-n+3) { background: linear-gradient(135deg, var(--primary-dim), var(--primary-strong)); }
+.skill-ev { display: block; margin-top: 5px; font-family: var(--mono); font-size: .72rem; color: var(--text-mute); }
+.skill-ev .tier-label { text-transform: uppercase; letter-spacing: .04em; }
+.skill-ev.t3 .tier-label { color: var(--primary); }
 
 .skill-tools { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--border-soft); }
 .tools-label { display: block; font-family: var(--mono); font-size: .82rem; color: var(--text-mute); margin-bottom: 16px; }

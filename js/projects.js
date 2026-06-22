@@ -1,4 +1,4 @@
-/* ===== PROJECTS — Single Source of Truth ===== */
+/* ===== PROJECTS - Single Source of Truth ===== */
 window.PROJECTS = [
     // ── PRODUCTS ──────────────────────────────────────────────────
     {
@@ -29,7 +29,7 @@ window.PROJECTS = [
         status: 'mvp',
         resultIcon: 'fa-rocket',
         tags: ['Next.js 15', 'Supabase', 'Google Vision API', 'OpenAI/Anthropic', 'Telegram Bot'],
-        links: [{ kind: 'github', href: 'https://github.com/Bkankim/ASHD', label: 'View Code' }],
+        links: [{ kind: 'external', href: 'https://ashd.bkan.dev', label: 'ashd.bkan.dev' }],
         en: {
             title: 'ASHD v2',
             subtitle: 'Warranty & A/S Management Service',
@@ -329,7 +329,7 @@ window.PROJECTS = [
         ko: {
             title: '과학 질의응답 IR 대회',
             subtitle: 'RAG Retrieval & Ranking',
-            desc: '과학 도메인 RAG 기반 검색·랭킹을 고도화해 MAP/MRR을 대폭 개선. Solar 임베딩, 랭크 그래프 리팩토링, 프롬프트 고도화·미세튜닝을 적용.',
+            desc: '과학 도메인 RAG 기반 검색·랭킹을 고도화해 MAP/MRR을 대폭 개선. Solar 임베딩, 랭크 그래프 리팩토링, 프롬프트 튜닝을 적용.',
             result: 'MAP/MRR 107% 향상 <br>(0.4242 → 0.8795 / 0.8818)'
         }
     },

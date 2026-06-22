@@ -149,7 +149,7 @@ jobs:
 - **About**: Narrative, interactive terminal block, and animated stat counters
 - **Skills**: Progress-bar categories (AI/ML, Web/Infra, Security) plus a tool tag cloud
 - **Projects**: Filterable cards rendered from `js/projects.js` (single source of truth)
-- **Experience**: Vertical timeline (chronological) — education, security, bootcamp, independent building, contract work
+- **Experience**: Vertical timeline (chronological) - education, security, bootcamp, independent building, contract work
 - **Contact**: Email, GitHub, and Threads
 
 ## 🌟 Key Projects Showcased
@@ -199,4 +199,4 @@ Contributions, issues, and feature requests are welcome!
 
 **Built with ❤️ and ☕ by Byeonghyeon Kim**
 
-*Last Updated: June 2026 — redesigned with a dark-first, terminal/code aesthetic*
+*Last Updated: June 2026 - redesigned with a dark-first, terminal/code aesthetic*
