@@ -195,18 +195,21 @@
                         <p class="tl-role" data-en="AI Engineer (Freelance)" data-ko="AI 엔지니어 (프리랜서)">AI 엔지니어 (프리랜서)</p>
                         <p data-en="Using Hindsight, enforced security-grade access control over personal and team memory while keeping it reliably accumulating and operating, then chained team memories into the foundation of a company-wide enterprise memory system. With Graphify, advanced that memory's knowledge to codebase granularity and token-efficiency. Ran the whole stack on on-prem infrastructure (15 Mac Studios meshed via Tailscale, zero external cloud)." data-ko="Hindsight를 기반으로 개인·팀 메모리의 접근 권한을 보안적으로 엄격히 제어하면서도 누락 없이 누적·동작하도록 구현하고, 팀 메모리를 묶어 전사 기업 메모리 시스템의 토대를 구축했습니다. 이 과정에서 Graphify로 메모리 지식을 코드베이스 단위까지 세밀하고 토큰 친화적으로 고도화했습니다. 전 과정은 Mac Studio 15대를 Tailscale 독립망으로 묶은 온프렘 인프라(외부 클라우드 0) 위에서 운영했습니다.">Hindsight를 기반으로 개인·팀 메모리의 접근 권한을 보안적으로 엄격히 제어하면서도 누락 없이 누적·동작하도록 구현하고, 팀 메모리를 묶어 전사 기업 메모리 시스템의 토대를 구축했습니다. 이 과정에서 Graphify로 메모리 지식을 코드베이스 단위까지 세밀하고 토큰 친화적으로 고도화했습니다. 전 과정은 Mac Studio 15대를 Tailscale 독립망으로 묶은 온프렘 인프라(외부 클라우드 0) 위에서 운영했습니다.</p>
                         <div class="tl-tags"><span class="tool-tag">Hindsight</span><span class="tool-tag">Graphify</span><span class="tool-tag">Tailscale</span><span class="tool-tag">Self-Hosted LLM</span><span class="tool-tag">Multi-Agent</span></div>
-                        <div class="tl-evidence">
-                            <span class="tl-evidence-label mono" data-en="field evidence" data-ko="현장 증거">현장 증거</span>
-                            <div class="tl-evidence-grid">
-                                <figure>
-                                    <a href="assets/exp/onprem-cluster.jpg" target="_blank" rel="noopener"><img src="assets/exp/onprem-cluster.jpg" alt="On-prem Mac Studio cluster" loading="lazy"></a>
-                                    <figcaption data-en="On-prem Mac Studio cluster (role-assigned)" data-ko="온프렘 Mac Studio 클러스터 (역할 배정)">온프렘 Mac Studio 클러스터 (역할 배정)</figcaption>
-                                </figure>
-                                <figure>
-                                    <a href="assets/exp/knowledge-graph.png" target="_blank" rel="noopener"><img src="assets/exp/knowledge-graph.png" alt="Codebase knowledge graph (Graphify)" loading="lazy"></a>
-                                    <figcaption data-en="Codebase knowledge graph (Graphify)" data-ko="코드베이스 지식그래프 (Graphify)">코드베이스 지식그래프 (Graphify)</figcaption>
-                                </figure>
-                            </div>
+                    </div>
+                    <!-- Evidence sub-branch: hangs off the timeline as a tree node.
+                         To add evidence to another card, drop the same .tl-evidence block
+                         right after that card's .tl-content (inside its .tl-item). -->
+                    <div class="tl-evidence">
+                        <span class="tl-evidence-label mono" data-en="field evidence" data-ko="현장 증거">현장 증거</span>
+                        <div class="tl-evidence-grid">
+                            <figure>
+                                <a href="assets/exp/onprem-cluster.jpg" target="_blank" rel="noopener"><img src="assets/exp/onprem-cluster.jpg" alt="On-prem Mac Studio cluster" loading="lazy"></a>
+                                <figcaption data-en="On-prem Mac Studio cluster (role-assigned)" data-ko="온프렘 Mac Studio 클러스터 (역할 배정)">온프렘 Mac Studio 클러스터 (역할 배정)</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="assets/exp/knowledge-graph.png" target="_blank" rel="noopener"><img src="assets/exp/knowledge-graph.png" alt="Codebase knowledge graph (Graphify)" loading="lazy"></a>
+                                <figcaption data-en="Codebase knowledge graph (Graphify)" data-ko="코드베이스 지식그래프 (Graphify)">코드베이스 지식그래프 (Graphify)</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -218,6 +221,20 @@
                         <p class="tl-role" data-en="Founder / Engineer" data-ko="창업자 / 엔지니어">창업자 / 엔지니어</p>
                         <p data-en="Building and shipping AI products myself: Ourfolio (evidence-based portfolio SaaS), ASHD v2 (OCR + LLM), and BK-HQ, a 15-agent operating system that runs a solo AI company." data-ko="AI 제품을 직접 만들어 출시합니다. Ourfolio(근거 기반 포트폴리오 SaaS), ASHD v2(OCR + LLM), 그리고 1인 AI 회사를 굴리는 15-에이전트 운영체제 BK-HQ.">AI 제품을 직접 만들어 출시합니다. Ourfolio(근거 기반 포트폴리오 SaaS), ASHD v2(OCR + LLM), 그리고 1인 AI 회사를 굴리는 15-에이전트 운영체제 BK-HQ.</p>
                         <div class="tl-tags"><span class="tool-tag">Next.js</span><span class="tool-tag">RAG</span><span class="tool-tag">Multi-Agent</span><span class="tool-tag">SaaS</span></div>
+                    </div>
+                    <!-- Live-product sub-branch: thumbnails link to the deployed sites (not a lightbox). -->
+                    <div class="tl-evidence">
+                        <span class="tl-evidence-label mono" data-en="live products" data-ko="라이브 제품">라이브 제품</span>
+                        <div class="tl-evidence-grid">
+                            <figure>
+                                <a href="https://ourfolio.bkan.dev" target="_blank" rel="noopener"><img src="assets/exp/ourfolio.jpg" alt="OurFolio dashboard" loading="lazy"></a>
+                                <figcaption data-en="OurFolio · evidence-based portfolio SaaS (MVP) ↗" data-ko="OurFolio · 근거 기반 포트폴리오 SaaS (MVP) ↗">OurFolio · 근거 기반 포트폴리오 SaaS (MVP) ↗</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="https://ashd.bkan.dev" target="_blank" rel="noopener"><img src="assets/exp/ashd.jpg" alt="ASHD v2 login" loading="lazy"></a>
+                                <figcaption data-en="ASHD v2 · warranty &amp; A/S (OCR + LLM, PoC) ↗" data-ko="ASHD v2 · AS·보증 관리 (OCR + LLM, PoC) ↗">ASHD v2 · AS·보증 관리 (OCR + LLM, PoC) ↗</figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
                 <div class="tl-item">
