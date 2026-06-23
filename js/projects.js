@@ -11,13 +11,13 @@ window.PROJECTS = [
         en: {
             title: 'On-Prem LLM Multi-Agent Infra',
             subtitle: 'Enterprise AI System (Freelance, 2026)',
-            desc: 'Meshed 15 role-assigned Mac Studios over Tailscale into an isolated private network, then self-hosted LLM serving on it with no external cloud. Fronted by a messenger (Discord) agent bot; a worker agent and a reviewer agent collaborate via automatic handoff, with auto-recovery after reboot for always-on operation.',
+            desc: 'Meshed 15 role-assigned Mac Studios over Tailscale into an isolated private network, then self-hosted LLM serving on it with no external cloud. Fronted by a messenger (Discord) agent bot; a worker agent and a reviewer agent collaborate via automatic handoff, with auto-recovery after reboot for always-on operation. This on-prem stack is the substrate the enterprise memory and agent systems run on.',
             result: '15 Mac Studios on a Tailscale private network self-serving a private model + worker/reviewer 2-agent auto-collaboration, reboot auto-recovery (always-on)'
         },
         ko: {
             title: '온프렘 LLM 멀티에이전트 인프라',
             subtitle: '기업 AI 시스템 실무 (프리랜서, 2026)',
-            desc: '역할별로 배정한 Mac Studio 15대를 Tailscale 메시로 묶어 외부에 노출되지 않는 독립 프라이빗 네트워크를 구성하고, 그 위에 외부 클라우드 없이 LLM을 자체 서빙. 메신저(디스코드) 에이전트 봇으로 연결하고, 진행·검수 에이전트가 자동 핸드오프로 협업하며 재부팅 후 자동 복구로 상시 가동.',
+            desc: '역할별로 배정한 Mac Studio 15대를 Tailscale 메시로 묶어 외부에 노출되지 않는 독립 프라이빗 네트워크를 구성하고, 그 위에 외부 클라우드 없이 LLM을 자체 서빙. 메신저(디스코드) 에이전트 봇으로 연결하고, 진행·검수 에이전트가 자동 핸드오프로 협업하며 재부팅 후 자동 복구로 상시 가동. 이 온프렘 스택 위에서 전사 메모리·에이전트 시스템이 운영됩니다.',
             result: 'Mac Studio 15대 Tailscale 독립망에 비공개 모델 온프렘 서빙 + 진행·검수 2-에이전트 자동 협업, 재부팅 자동복구 상시가동'
         },
         caseStudy: {
@@ -41,32 +41,32 @@ window.PROJECTS = [
         featured: true,
         status: 'in-progress',
         resultIcon: 'fa-check-circle',
-        tags: ['Python', 'PySide6', 'Clean Architecture', 'AsyncSSH/PyWinRM', 'SQLite'],
-        links: [{ kind: 'github', href: 'https://github.com/Bkankim/Bluepy', label: 'View Code' }],
+        tags: ['Python', 'PySide6', 'Clean Architecture', 'AsyncSSH/PyWinRM', 'SQLite', 'Open Source (MIT)'],
+        links: [{ kind: 'github', href: 'https://github.com/Bkankim/Bluepy', label: 'GitHub (MIT)' }],
         en: {
             title: 'BluePy 2.0',
-            subtitle: 'Infra Security Scanner',
-            desc: 'Multi-platform (Windows/macOS/Linux) infra security scanner with auto remediation. Unified GUI/rollback/reporting that automate 170+ rules.',
-            result: '170+ rules scanned/fixed, 60%+ test coverage'
+            subtitle: 'Open-Source Infra Security Scanner',
+            desc: 'Multi-platform (Windows/macOS/Linux) infra security scanner with auto-remediation. Unified GUI, dry-run simulation, rollback, and reporting automate 170+ rules (Linux fully KISA-compliant) so non-experts can run it safely. Open source under the MIT license.',
+            result: '170+ rules scanned/fixed, 354 tests passing at 63% coverage'
         },
         ko: {
             title: 'BluePy 2.0',
-            subtitle: 'Infra Security Scanner',
-            desc: '멀티플랫폼(Windows/macOS/Linux) 인프라 보안 자동 점검·수정 도구. GUI·롤백·보고서까지 일원화하고 170+ 규칙을 자동화해 비전문가도 운영 가능하게 설계.',
-            result: '170+ 보안 규칙 점검/자동 수정, 테스트 커버리지 60%+'
+            subtitle: '오픈소스 인프라 보안 스캐너',
+            desc: '멀티플랫폼(Windows/macOS/Linux) 인프라 보안 자동 점검·수정 도구. GUI·dry-run 시뮬레이션·롤백·보고서를 일원화하고 170+ 규칙(Linux는 KISA 기준 완전 준수)을 자동화해 비전문가도 안전하게 운영. MIT 라이선스로 공개한 오픈소스.',
+            result: '170+ 보안 규칙 점검/자동 수정, 테스트 354건 통과·커버리지 63%'
         },
         caseStudy: {
             en: {
                 problem: 'Infra security hardening was manual, inconsistent across Windows/macOS/Linux, and hard for non-experts to run safely.',
-                role: 'Built the scanner end to end: rule engine, auto-remediation with rollback, unified GUI and reporting.',
-                tech: 'Python, PySide6 GUI, Clean Architecture, AsyncSSH/PyWinRM remote execution, SQLite, 170+ security rules.',
-                impact: '170+ rules scanned and auto-remediated across 3 platforms with rollback safety; 60%+ test coverage.'
+                role: 'Built the open-source scanner end to end: rule engine, auto-remediation with dry-run and rollback, unified GUI and reporting.',
+                tech: 'Python 3.12, PySide6 GUI, Clean (hexagonal) Architecture, AsyncSSH/PyWinRM remote execution, SQLite, dry-run simulation, 170+ security rules (Linux fully KISA-compliant); open-sourced under MIT.',
+                impact: '170+ rules scanned and auto-remediated across 3 platforms with dry-run/rollback safety; 354 tests passing at 63% coverage.'
             },
             ko: {
                 problem: '인프라 보안 하드닝이 수작업·플랫폼(Win/macOS/Linux)별 비일관이라 비전문가가 안전하게 돌리기 어려웠음.',
-                role: '스캐너 전체를 구축: 규칙 엔진, 롤백 포함 자동 수정, GUI·보고서 일원화.',
-                tech: 'Python, PySide6 GUI, Clean Architecture, AsyncSSH/PyWinRM 원격 실행, SQLite, 170+ 보안 규칙.',
-                impact: '3개 플랫폼에서 170+ 규칙 점검·자동 수정(롤백 안전), 테스트 커버리지 60%+.'
+                role: '스캐너 전체를 구축: 규칙 엔진, dry-run·롤백 포함 자동 수정, GUI·보고서 일원화. MIT 오픈소스로 공개.',
+                tech: 'Python 3.12, PySide6 GUI, Clean(헥사고날) Architecture, AsyncSSH/PyWinRM 원격 실행, SQLite, dry-run 시뮬레이션, 170+ 보안 규칙(Linux는 KISA 기준 완전 준수), MIT 오픈소스.',
+                impact: '3개 플랫폼에서 170+ 규칙 점검·자동 수정(dry-run·롤백 안전), 테스트 354건 통과·커버리지 63%.'
             }
         }
     },
@@ -118,32 +118,32 @@ window.PROJECTS = [
         featured: true,
         status: 'completed',
         resultIcon: 'fa-brain',
-        tags: ['Hindsight', 'Graphify', 'RBAC Gateway', 'Multi-Tenant', 'Knowledge Graph', 'Memory System'],
+        tags: ['Hindsight', 'Graphify', 'RBAC Gateway', 'Multi-Tenant', 'Enterprise Memory', 'Codebase Graph'],
         links: [],
         en: {
-            title: 'Team AI Long-term Memory',
+            title: 'Team & Enterprise AI Memory',
             subtitle: 'Enterprise AI System (Freelance)',
-            desc: 'Customized the open-source agent-memory Hindsight into per-employee personal and team memory banks. Recall/Reflect are permission-gated so a personal bank is readable only by its owner (privacy isolation), with automated work logging and daily reports. Wove in a Graphify knowledge graph to advance it into a queryable knowledge system.',
-            result: 'Personal/team banks + permission isolation (owner-only) + automated reporting, Graphify knowledge graph'
+            desc: 'Customized the open-source agent-memory Hindsight into per-employee personal and team memory banks. Recall/Reflect access is security-gated so a personal bank is readable only by its owner (privacy isolation) while reliably accumulating, with automated work logging and daily reports. Chained team banks into the foundation of a company-wide enterprise memory system, and used Graphify to advance the memory knowledge to codebase granularity and token-efficiency.',
+            result: 'Personal/team banks → company-wide memory foundation, security-gated isolation (owner-only) + automated reporting, Graphify codebase-granular & token-efficient'
         },
         ko: {
-            title: '팀 AI 장기기억 시스템',
+            title: '팀·전사 AI 메모리 시스템',
             subtitle: '기업 AI 시스템 실무 (프리랜서)',
-            desc: '오픈소스 에이전트 메모리 Hindsight를 커스터마이즈해 직원별 personal·team 메모리 bank를 구축. Recall·Reflect에 권한을 걸어 개인 bank는 본인만 열람(개인정보 격리)하고, 업무기록·일일보고를 자동화. Graphify 지식그래프를 결합해 질의 가능한 지식 시스템으로 고도화.',
-            result: 'personal·team bank + 권한 격리(개인 bank 본인 only) + 업무보고 자동화, Graphify 지식그래프 결합'
+            desc: '오픈소스 에이전트 메모리 Hindsight를 커스터마이즈해 직원별 personal·team 메모리 bank를 구축. Recall·Reflect 접근 권한을 보안 등급으로 엄격히 제어해 개인 bank는 본인만 열람(개인정보 격리)하면서 누락 없이 누적·동작하게 하고, 업무기록·일일보고를 자동화. 팀 메모리를 묶어 전사 기업 메모리 시스템의 토대를 구축하고, Graphify로 메모리 지식을 코드베이스 단위까지 토큰 친화적으로 고도화.',
+            result: '개인·팀 bank → 전사 메모리 토대, 보안 등급 권한 격리(개인 bank 본인 only) + 업무보고 자동화, Graphify 코드베이스 단위·토큰 친화 고도화'
         },
         caseStudy: {
             en: {
-                problem: "Each AI user's work context kept evaporating, and self-review and report-writing were manual. Personal records also needed privacy isolation.",
-                role: 'Customized the open-source agent-memory Hindsight into personal/team banks with a permission gateway, and wove in a Graphify knowledge graph (freelance).',
-                tech: 'Hindsight (Retain/Recall/Reflect), RBAC permission gateway (personal bank owner-only), multi-tenant isolation, Graphify knowledge graph, automated work logging and daily reports.',
-                impact: 'Employees self-review and auto-generate reports from their personal bank; managers track work via team banks. Personal banks are readable only by their owner, keeping personal data isolated.'
+                problem: "Each AI user's work context kept evaporating, self-review and report-writing were manual, and personal records needed privacy isolation - while the org wanted a memory layer that could scale company-wide.",
+                role: 'Customized the open-source agent-memory Hindsight into personal/team banks behind a security-grade permission gateway, chained them into a company-wide memory foundation, and wove in a Graphify knowledge graph (freelance).',
+                tech: 'Hindsight (Retain/Recall/Reflect), RBAC permission gateway (personal bank owner-only), multi-tenant isolation, company-wide enterprise memory layer, Graphify advancing memory to codebase granularity and token-efficiency, automated work logging and daily reports.',
+                impact: 'Employees self-review and auto-generate reports from their personal bank; managers track work via team banks; team memory forms the foundation of a company-wide enterprise memory system. Personal banks stay owner-only, keeping personal data isolated.'
             },
             ko: {
-                problem: '조직 내 AI 사용자마다 업무 맥락이 휘발되고, 업무 복기·보고서 작성이 수작업이었음. 개인 기록의 프라이버시 격리도 필요했음.',
-                role: '오픈소스 에이전트 메모리 Hindsight를 커스터마이즈해 personal·team bank 구조와 권한 게이트웨이를 설계·구현하고, Graphify 지식그래프를 결합 (프리랜서).',
-                tech: 'Hindsight(Retain·Recall·Reflect), RBAC 권한 게이트웨이(개인 bank 본인 only), 멀티테넌트 격리, Graphify 지식그래프, 업무기록·일일보고 자동화.',
-                impact: '직원은 personal bank로 업무 복기와 보고서 자동화, 관리자는 team bank로 업무 추적·관리. 개인 bank는 본인만 열람해 개인정보 보안을 확보.'
+                problem: '조직 내 AI 사용자마다 업무 맥락이 휘발되고, 업무 복기·보고서 작성이 수작업이었음. 개인 기록의 프라이버시 격리가 필요했고, 전사로 확장 가능한 메모리 계층도 요구됐음.',
+                role: '오픈소스 에이전트 메모리 Hindsight를 커스터마이즈해 personal·team bank 구조와 보안 등급 권한 게이트웨이를 설계·구현하고, 이를 묶어 전사 메모리 토대를 구축하며 Graphify 지식그래프를 결합 (프리랜서).',
+                tech: 'Hindsight(Retain·Recall·Reflect), RBAC 권한 게이트웨이(개인 bank 본인 only), 멀티테넌트 격리, 전사 기업 메모리 계층, Graphify로 메모리 지식을 코드베이스 단위·토큰 친화 고도화, 업무기록·일일보고 자동화.',
+                impact: '직원은 personal bank로 업무 복기·보고서 자동화, 관리자는 team bank로 업무 추적·관리하고, 팀 메모리는 전사 기업 메모리 시스템의 토대가 됨. 개인 bank는 본인만 열람해 개인정보 보안을 확보.'
             }
         }
     },
