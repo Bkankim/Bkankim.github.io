@@ -201,12 +201,18 @@ body.light .theme-toggle .fa-moon { display: none; }
     padding: 120px 0 80px; position: relative;
 }
 .hero-inner { position: relative; z-index: 1; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
 .hero-badge {
     display: inline-flex; align-items: center; gap: 9px;
     font-family: var(--mono); font-size: .8rem; color: var(--primary);
     background: var(--primary-glow); border: 1px solid var(--primary-border);
-    padding: 7px 15px; border-radius: 999px; margin-bottom: 28px;
+    padding: 7px 15px; border-radius: 999px;
 }
+/* freelance badge: cool teal variant (dot pulse recolored via --primary-border) */
+.hero-badge-alt { color: #5bc0b5; background: rgba(79, 182, 173, .12); border-color: rgba(79, 182, 173, .30); }
+.hero-badge-alt .badge-dot { background: #5bc0b5; --primary-border: rgba(79, 182, 173, .35); }
+body.light .hero-badge-alt { color: #0f766e; background: rgba(15, 118, 110, .10); border-color: rgba(15, 118, 110, .32); }
+body.light .hero-badge-alt .badge-dot { background: #0f766e; --primary-border: rgba(15, 118, 110, .35); }
 .badge-dot {
     width: 7px; height: 7px; border-radius: 50%; background: var(--primary);
     animation: pulse 2s infinite;
@@ -274,6 +280,8 @@ body.light .theme-toggle .fa-moon { display: none; }
 .about-body p { color: var(--text-dim); margin-bottom: 18px; font-size: 1.02rem; }
 .about-body p:last-child { margin-bottom: 0; }
 .about-body strong { color: var(--text); font-weight: 600; }
+.about-focus { margin-top: 28px; }
+.about-focus .focus-note { margin-top: 14px; margin-bottom: 0; }
 
 .terminal {
     background: var(--term-bg); border: 1px solid var(--border); border-radius: var(--radius);

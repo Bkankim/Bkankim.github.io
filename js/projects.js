@@ -10,26 +10,26 @@ window.PROJECTS = [
         links: [],
         en: {
             title: 'On-Prem LLM Multi-Agent Infra',
-            subtitle: 'Enterprise AI System (Contract, 2026)',
+            subtitle: 'Enterprise AI System (Freelance, 2026)',
             desc: 'Self-hosted LLM serving on on-prem hardware with no external cloud, fronted by a messenger (Discord) agent bot. A worker agent and a reviewer agent collaborate via automatic handoff, with auto-recovery after reboot for always-on operation.',
             result: 'Private model self-served on-prem + worker/reviewer 2-agent auto-collaboration, reboot auto-recovery (always-on)'
         },
         ko: {
             title: '온프렘 LLM 멀티에이전트 인프라',
-            subtitle: '기업 AI 시스템 실무 (계약, 2026)',
+            subtitle: '기업 AI 시스템 실무 (프리랜서, 2026)',
             desc: '외부 클라우드 없이 온프렘 장비에 LLM을 자체 서빙하고 메신저(디스코드) 에이전트 봇으로 연결. 진행 에이전트와 검수 에이전트가 자동 핸드오프로 협업하며, 재부팅 후 자동 복구되어 상시 가동.',
             result: '비공개 모델 온프렘 자체 서빙 + 진행·검수 2-에이전트 자동 협업, 재부팅 자동복구 상시가동'
         },
         caseStudy: {
             en: {
                 problem: 'An enterprise needed LLM capability without sending data to any external cloud, plus reliable unattended operation.',
-                role: 'Designed and built the on-prem serving and multi-agent orchestration end to end (contract).',
+                role: 'Designed and built the on-prem serving and multi-agent orchestration end to end (freelance).',
                 tech: 'Self-hosted LLM serving, two-agent (worker + reviewer) auto-handoff, Discord bot interface, process supervision with reboot auto-recovery.',
                 impact: 'Private model served fully on-prem (zero external cloud), automatic worker/reviewer collaboration, and reboot auto-recovery for always-on availability.'
             },
             ko: {
                 problem: '기업이 데이터를 외부 클라우드로 보내지 않으면서 LLM 역량을 확보하고, 무인 상시 가동까지 필요로 했음.',
-                role: '온프렘 서빙과 멀티에이전트 오케스트레이션을 직접 설계하고 구축 (계약).',
+                role: '온프렘 서빙과 멀티에이전트 오케스트레이션을 직접 설계하고 구축 (프리랜서).',
                 tech: 'LLM 자체 서빙, 2-에이전트(진행+검수) 자동 핸드오프, 디스코드 봇 인터페이스, 재부팅 자동복구 프로세스 관리.',
                 impact: '비공개 모델 완전 온프렘 서빙(외부 클라우드 0), 진행·검수 자동 협업, 재부팅 자동복구로 상시 가용.'
             }
@@ -115,22 +115,36 @@ window.PROJECTS = [
     {
         id: 'ent-team-memory',
         category: 'infra',
-        featured: false,
+        featured: true,
         status: 'completed',
         resultIcon: 'fa-brain',
-        tags: ['Memory System', 'RBAC Gateway', 'Multi-Tenant', 'Daily Report Automation'],
+        tags: ['Hindsight', 'Graphify', 'RBAC Gateway', 'Multi-Tenant', 'Knowledge Graph', 'Memory System'],
         links: [],
         en: {
             title: 'Team AI Long-term Memory',
-            subtitle: 'Enterprise AI System (Contract)',
-            desc: 'A three-tier memory system (personal -> team -> org) with a per-member permission gateway for multi-user isolation, plus automated daily reporting, deployed to the team.',
-            result: '3-tier memory + permission gateway + automated daily reports, deployed to team'
+            subtitle: 'Enterprise AI System (Freelance)',
+            desc: 'Customized the open-source agent-memory Hindsight into per-employee personal and team memory banks. Recall/Reflect are permission-gated so a personal bank is readable only by its owner (privacy isolation), with automated work logging and daily reports. Wove in a Graphify knowledge graph to advance it into a queryable knowledge system.',
+            result: 'Personal/team banks + permission isolation (owner-only) + automated reporting, Graphify knowledge graph'
         },
         ko: {
             title: '팀 AI 장기기억 시스템',
-            subtitle: '기업 AI 시스템 실무 (계약)',
-            desc: '개인 → 팀 → 전사 3단계 메모리에 멤버별 권한 게이트웨이(다중 사용자 격리)를 더하고, 일일보고 자동화를 팀에 배포.',
-            result: '3단계 메모리 + 권한 게이트웨이 + 일일보고 자동화 팀 배포'
+            subtitle: '기업 AI 시스템 실무 (프리랜서)',
+            desc: '오픈소스 에이전트 메모리 Hindsight를 커스터마이즈해 직원별 personal·team 메모리 bank를 구축. Recall·Reflect에 권한을 걸어 개인 bank는 본인만 열람(개인정보 격리)하고, 업무기록·일일보고를 자동화. Graphify 지식그래프를 결합해 질의 가능한 지식 시스템으로 고도화.',
+            result: 'personal·team bank + 권한 격리(개인 bank 본인 only) + 업무보고 자동화, Graphify 지식그래프 결합'
+        },
+        caseStudy: {
+            en: {
+                problem: "Each AI user's work context kept evaporating, and self-review and report-writing were manual. Personal records also needed privacy isolation.",
+                role: 'Customized the open-source agent-memory Hindsight into personal/team banks with a permission gateway, and wove in a Graphify knowledge graph (freelance).',
+                tech: 'Hindsight (Retain/Recall/Reflect), RBAC permission gateway (personal bank owner-only), multi-tenant isolation, Graphify knowledge graph, automated work logging and daily reports.',
+                impact: 'Employees self-review and auto-generate reports from their personal bank; managers track work via team banks. Personal banks are readable only by their owner, keeping personal data isolated.'
+            },
+            ko: {
+                problem: '조직 내 AI 사용자마다 업무 맥락이 휘발되고, 업무 복기·보고서 작성이 수작업이었음. 개인 기록의 프라이버시 격리도 필요했음.',
+                role: '오픈소스 에이전트 메모리 Hindsight를 커스터마이즈해 personal·team bank 구조와 권한 게이트웨이를 설계·구현하고, Graphify 지식그래프를 결합 (프리랜서).',
+                tech: 'Hindsight(Retain·Recall·Reflect), RBAC 권한 게이트웨이(개인 bank 본인 only), 멀티테넌트 격리, Graphify 지식그래프, 업무기록·일일보고 자동화.',
+                impact: '직원은 personal bank로 업무 복기와 보고서 자동화, 관리자는 team bank로 업무 추적·관리. 개인 bank는 본인만 열람해 개인정보 보안을 확보.'
+            }
         }
     },
     {
@@ -143,13 +157,13 @@ window.PROJECTS = [
         links: [],
         en: {
             title: 'Unified Admin Dashboard',
-            subtitle: 'Enterprise AI System (Contract)',
+            subtitle: 'Enterprise AI System (Freelance)',
             desc: 'A 13-module admin derived from a single module registry. Spec-driven (PRD/SDD/TDD) with accessibility, dark mode, and responsive layout.',
             result: '13 modules from one registry, 81 tests passing (demo)'
         },
         ko: {
             title: '통합 어드민 대시보드 (데모)',
-            subtitle: '기업 AI 시스템 실무 (계약)',
+            subtitle: '기업 AI 시스템 실무 (프리랜서)',
             desc: '단일 모듈 레지스트리에서 파생한 13모듈 어드민. 스펙주도(PRD/SDD/TDD)로 접근성·다크모드·반응형까지 구현.',
             result: '레지스트리 파생 13모듈, 테스트 81건 통과 (데모)'
         }
