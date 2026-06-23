@@ -41,32 +41,32 @@ window.PROJECTS = [
         featured: true,
         status: 'in-progress',
         resultIcon: 'fa-check-circle',
-        tags: ['Python', 'PySide6', 'Clean Architecture', 'AsyncSSH/PyWinRM', 'SQLite', 'Open Source (MIT)'],
+        tags: ['Python 3.12', 'uv', 'AsyncSSH', 'Clean Architecture', 'pytest · GitHub Actions CI', 'Open Source (MIT)'],
         links: [{ kind: 'github', href: 'https://github.com/Bkankim/Bluepy', label: 'GitHub (MIT)' }],
         en: {
             title: 'BluePy 2.0',
             subtitle: 'Open-Source Infra Security Scanner',
-            desc: 'Multi-platform (Windows/macOS/Linux) infra security scanner with auto-remediation. Unified GUI, dry-run simulation, rollback, and reporting automate 170+ rules (Linux fully KISA-compliant) so non-experts can run it safely. Open source under the MIT license.',
-            result: '170+ rules scanned/fixed, 354 tests passing at 63% coverage'
+            desc: 'Modernization of a 2017 legacy KISA security scanner into a Python 3.12 clean-architecture codebase, released as an honest open-source v0.1 (alpha). The first release exposes only causally-verified checks by default (Linux file permissions; macOS SIP / FileVault / auto-update); known false-PASS validators were deleted and unverified legacy rules are flagged experimental and hidden. CLI-first (JSON + table), strict SSH host-key verification by default, MIT-licensed.',
+            result: 'v0.1.0 released - verified-only honest scan; 536 tests passing + live SSH acceptance (GUI / Windows / auto-remediation engine present but deferred)'
         },
         ko: {
             title: 'BluePy 2.0',
             subtitle: '오픈소스 인프라 보안 스캐너',
-            desc: '멀티플랫폼(Windows/macOS/Linux) 인프라 보안 자동 점검·수정 도구. GUI·dry-run 시뮬레이션·롤백·보고서를 일원화하고 170+ 규칙(Linux는 KISA 기준 완전 준수)을 자동화해 비전문가도 안전하게 운영. MIT 라이선스로 공개한 오픈소스.',
-            result: '170+ 보안 규칙 점검/자동 수정, 테스트 354건 통과·커버리지 63%'
+            desc: '2017년 레거시 KISA 보안 스캐너를 Python 3.12 클린아키텍처로 현대화하고 정직한 오픈소스 v0.1(alpha)로 출시. 첫 릴리스는 인과 검증된 점검만 기본 노출(리눅스 파일권한, macOS SIP/FileVault/자동업데이트), 거짓PASS validator는 삭제하고 미검증 레거시 규칙은 experimental로 숨김. CLI 우선(JSON·표 출력), SSH 호스트키 엄격 검증 기본, MIT 라이선스.',
+            result: 'v0.1.0 출시 - 검증 점검만 노출하는 정직 스캔; 테스트 536건 통과 + 라이브 SSH 합격(GUI/Windows/자동수정 엔진은 보유하되 보류)'
         },
         caseStudy: {
             en: {
-                problem: 'Infra security hardening was manual, inconsistent across Windows/macOS/Linux, and hard for non-experts to run safely.',
-                role: 'Built the open-source scanner end to end: rule engine, auto-remediation with dry-run and rollback, unified GUI and reporting.',
-                tech: 'Python 3.12, PySide6 GUI, Clean (hexagonal) Architecture, AsyncSSH/PyWinRM remote execution, SQLite, dry-run simulation, 170+ security rules (Linux fully KISA-compliant); open-sourced under MIT.',
-                impact: '170+ rules scanned and auto-remediated across 3 platforms with dry-run/rollback safety; 354 tests passing at 63% coverage.'
+                problem: 'A 2017 legacy KISA scanner had scrambled rule-to-validator mappings - some checks returned unconditional PASS - so a naive 170-rule scanner would give false assurance.',
+                role: 'Led the honest open-source v0.1: deleted false-PASS validators, built an experimental-by-default rule filter so only causally-verified checks ship, added a JSON/table CLI, and hardened SSH host-key verification.',
+                tech: 'Python 3.12, uv, Clean (hexagonal) architecture, AsyncSSH; branch-covered causal tests (PASS/FAIL/MANUAL) with anchored matchers + real command captures; GitHub Actions CI (unit / macOS causal / live Docker acceptance); MIT with LICENSE/SECURITY/CONTRIBUTING and a verified-vs-experimental README.',
+                impact: 'Shipped a trustworthy verified set instead of an inflated rule count; 536 tests passing plus a live SSH acceptance run binding CLI output to the in-process proof; false-PASS checks removed at the source.'
             },
             ko: {
-                problem: '인프라 보안 하드닝이 수작업·플랫폼(Win/macOS/Linux)별 비일관이라 비전문가가 안전하게 돌리기 어려웠음.',
-                role: '스캐너 전체를 구축: 규칙 엔진, dry-run·롤백 포함 자동 수정, GUI·보고서 일원화. MIT 오픈소스로 공개.',
-                tech: 'Python 3.12, PySide6 GUI, Clean(헥사고날) Architecture, AsyncSSH/PyWinRM 원격 실행, SQLite, dry-run 시뮬레이션, 170+ 보안 규칙(Linux는 KISA 기준 완전 준수), MIT 오픈소스.',
-                impact: '3개 플랫폼에서 170+ 규칙 점검·자동 수정(dry-run·롤백 안전), 테스트 354건 통과·커버리지 63%.'
+                problem: '2017년 레거시 KISA 스캐너는 규칙-validator 매핑이 뒤섞여 일부 점검이 무조건 PASS를 반환 - 170개 규칙 스캐너로 내세우면 거짓 안심을 줄 수 있었음.',
+                role: '정직한 오픈소스 v0.1 주도: 거짓PASS validator 삭제, 검증 점검만 출하되도록 experimental 기본 필터 구축, JSON·표 CLI 추가, SSH 호스트키 검증 강화.',
+                tech: 'Python 3.12, uv, Clean(헥사고날) 아키텍처, AsyncSSH; 분기 커버 인과 테스트(PASS/FAIL/MANUAL)·anchored 매처·실제 명령 캡처; GitHub Actions CI(단위/macOS 인과/라이브 Docker 합격); MIT, LICENSE/SECURITY/CONTRIBUTING + 검증·실험 구분 README.',
+                impact: '부풀린 규칙 수 대신 신뢰 가능한 검증셋을 출하; 테스트 536건 통과 + CLI 출력을 인프로세스 증명에 결속한 라이브 SSH 합격; 거짓PASS 점검은 소스에서 제거.'
             }
         }
     },
@@ -76,40 +76,33 @@ window.PROJECTS = [
         featured: true,
         status: 'mvp',
         resultIcon: 'fa-rocket',
-        tags: ['Next.js 16', 'TypeScript', 'Neon', 'Drizzle ORM', 'BetterAuth', 'Tailwind+shadcn'],
+        tags: ['Next.js 16 (RSC)', 'TypeScript', 'Neon · Drizzle', 'BetterAuth (Google·GitHub)', 'Cloudflare R2', 'Vitest · Sentry'],
         links: [{ kind: 'external', href: 'https://ourfolio.bkan.dev', label: 'ourfolio.bkan.dev' }],
         en: {
             title: 'Ourfolio',
             subtitle: 'Evidence-Based Portfolio Platform',
-            desc: 'A SaaS platform for professionals to systematically prove their achievements and career with evidence-based portfolios.',
-            result: 'Evidence-based portfolio platform MVP launched'
+            desc: 'A SaaS platform for developers to prove their work with evidence-based portfolios - server-rendered public profiles, GitHub repo import, and dynamic OG/SEO. Hardened from MVP into a launch-ready v1 spine.',
+            result: 'v1 launch-ready - RSC public page (warm LCP ~0.26s), GitHub import, full SEO/OG, critical-path tests + Sentry'
         },
         ko: {
             title: 'Ourfolio',
             subtitle: '근거 기반 포트폴리오 플랫폼',
-            desc: '전문가가 성과와 경력을 체계적으로 증명할 수 있는 근거 기반 포트폴리오 SaaS 서비스.',
-            result: '근거 기반 포트폴리오 플랫폼 MVP 런칭'
-        }
-    },
-    {
-        id: 'p2',
-        category: 'product',
-        featured: false,
-        status: 'mvp',
-        resultIcon: 'fa-rocket',
-        tags: ['Next.js 15', 'Supabase', 'Cloudflare R2', 'Google Vision API', 'OpenAI/Anthropic', 'Telegram Bot'],
-        links: [{ kind: 'external', href: 'https://ashd.bkan.dev', label: 'ashd.bkan.dev' }],
-        en: {
-            title: 'ASHD v2',
-            subtitle: 'Warranty & A/S Management Service',
-            desc: 'OCR-based auto-recognition of receipts and warranty documents with expiry alerts. Google Vision API extraction, LLM structuring, email/Telegram alert automation.',
-            result: 'OCR auto-extraction + expiry alert automation MVP'
+            desc: '개발자가 작업물을 근거 기반 포트폴리오로 증명하는 SaaS - 서버 렌더 공개 프로필, GitHub 레포 임포트, 동적 OG/SEO. MVP에서 출시 가능한 v1 척추로 다듬음.',
+            result: 'v1 출시 준비 - RSC 공개 페이지(warm LCP ~0.26s), GitHub 임포트, SEO/OG, 핵심경로 테스트 + Sentry'
         },
-        ko: {
-            title: 'ASHD v2',
-            subtitle: '보증서·A/S 관리 서비스',
-            desc: 'OCR 기반 영수증·보증서 자동 인식 및 만료 알림 서비스. Google Vision API로 문서 추출, LLM으로 구조화, 이메일·텔레그램 알림 자동화.',
-            result: 'OCR 자동 추출 + 만료 알림 자동화 MVP'
+        caseStudy: {
+            en: {
+                problem: 'An MVP portfolio SaaS needed launch-readiness on a live, shared Neon database with no downtime: a consultant-era data model (case studies, budget ranges) had to be repositioned for developers, the public page had to clear mobile LCP < 2.5s, and there was no SEO, observability, or test safety net.',
+                role: 'Built the v1 spine end to end - a schema-first expand/contract migration, the persona repositioning, the public-page RSC refactor, GitHub import, SEO/OG, and the test + observability layer.',
+                tech: 'Next.js 16 App Router RSC (server-rendered hero/projects + thin client islands off a single relational Drizzle query); zero-downtime expand/contract migration on a shared-live Neon DB; better-auth Google + GitHub OAuth with idempotent repo import and metadata-only refresh that preserves manual edits; Cloudflare R2 (images + resume PDF); dynamic OG via next/og plus sitemap/robots/canonical; cookie/Accept-Language i18n resolved server-side; Vitest critical-path tests and @sentry/nextjs with lead-PII scrubbing.',
+                impact: 'Public profile renders server-side at ~0.26s warm LCP off one DB round-trip; GitHub repos import without duplicates and refresh updates only stars/language while preserving manual edits; full SEO (dynamic OG, sitemap, robots, canonical); 42 critical-path tests + Sentry runtime; the consultant-era model was dropped via a zero-downtime expand/contract cutover.'
+            },
+            ko: {
+                problem: 'MVP 포트폴리오 SaaS를 라이브 공유 Neon DB에서 무중단으로 출시 수준까지 끌어올려야 했음 - 컨설턴트 시절 데이터 모델(케이스 스터디·예산 범위)을 개발자용으로 재포지셔닝하고, 공개 페이지 모바일 LCP를 2.5s 미만으로 만들고, 부재했던 SEO·관측성·테스트 안전망을 깔아야 했음.',
+                role: 'v1 척추를 끝까지 구축 - 스키마 우선 expand/contract 마이그레이션, 페르소나 재포지셔닝, 공개 페이지 RSC 재구축, GitHub 임포트, SEO/OG, 테스트·관측성 레이어.',
+                tech: 'Next.js 16 App Router RSC(서버 렌더 hero/projects + 얇은 client island, 단일 relational Drizzle 쿼리); 라이브 공유 Neon DB에 무중단 expand/contract 마이그레이션; better-auth Google + GitHub OAuth, 멱등 레포 임포트 + 수동 편집 보존 메타데이터 전용 refresh; Cloudflare R2(이미지·이력서 PDF); next/og 동적 OG + sitemap/robots/canonical; 쿠키·Accept-Language 서버 i18n; Vitest 핵심경로 테스트 + @sentry/nextjs 리드 PII 스크럽.',
+                impact: '공개 프로필이 단일 DB 왕복으로 서버 렌더, warm LCP ~0.26s; GitHub 레포를 중복 없이 임포트하고 refresh는 stars/language만 갱신하며 수동 편집 보존; 전체 SEO(동적 OG·sitemap·robots·canonical); 핵심경로 테스트 42건 + Sentry 런타임; 컨설턴트 모델은 무중단 expand/contract 컷오버로 제거.'
+            }
         }
     },
     {
@@ -145,6 +138,27 @@ window.PROJECTS = [
                 tech: 'Hindsight(Retain·Recall·Reflect), RBAC 권한 게이트웨이(개인 bank 본인 only), 멀티테넌트 격리, 전사 기업 메모리 계층, Graphify로 메모리 지식을 코드베이스 단위·토큰 친화 고도화, 업무기록·일일보고 자동화.',
                 impact: '직원은 personal bank로 업무 복기·보고서 자동화, 관리자는 team bank로 업무 추적·관리하고, 팀 메모리는 전사 기업 메모리 시스템의 토대가 됨. 개인 bank는 본인만 열람해 개인정보 보안을 확보.'
             }
+        }
+    },
+    {
+        id: 'p2',
+        category: 'product',
+        featured: false,
+        status: 'mvp',
+        resultIcon: 'fa-rocket',
+        tags: ['Next.js 15', 'Supabase', 'Cloudflare R2', 'Google Vision API', 'OpenAI/Anthropic', 'Telegram Bot'],
+        links: [{ kind: 'external', href: 'https://ashd.bkan.dev', label: 'ashd.bkan.dev' }],
+        en: {
+            title: 'ASHD v2',
+            subtitle: 'Warranty & A/S Management Service',
+            desc: 'OCR-based auto-recognition of receipts and warranty documents with expiry alerts. Google Vision API extraction, LLM structuring, email/Telegram alert automation.',
+            result: 'OCR auto-extraction + expiry alert automation MVP'
+        },
+        ko: {
+            title: 'ASHD v2',
+            subtitle: '보증서·A/S 관리 서비스',
+            desc: 'OCR 기반 영수증·보증서 자동 인식 및 만료 알림 서비스. Google Vision API로 문서 추출, LLM으로 구조화, 이메일·텔레그램 알림 자동화.',
+            result: 'OCR 자동 추출 + 만료 알림 자동화 MVP'
         }
     },
     {
@@ -201,13 +215,13 @@ window.PROJECTS = [
             title: 'Science QA IR Competition',
             subtitle: 'RAG Retrieval & Ranking',
             desc: 'Scientific QA RAG with improved retrieval/ranking by Solar embeddings, rank-graph refactor, and prompt tuning.',
-            result: 'MAP/MRR +107% <br>(0.4242 → 0.8795 / 0.8818)'
+            result: 'MAP/MRR +107% (0.4242 → 0.8795 / 0.8818)'
         },
         ko: {
             title: '과학 질의응답 IR 대회',
             subtitle: 'RAG Retrieval & Ranking',
             desc: '과학 도메인 RAG 기반 검색·랭킹을 고도화해 MAP/MRR을 대폭 개선. Solar 임베딩, 랭크 그래프 리팩토링, 프롬프트 튜닝을 적용.',
-            result: 'MAP/MRR 107% 향상 <br>(0.4242 → 0.8795 / 0.8818)'
+            result: 'MAP/MRR 107% 향상 (0.4242 → 0.8795 / 0.8818)'
         }
     },
     {
@@ -222,13 +236,13 @@ window.PROJECTS = [
             title: 'Image Classification Model',
             subtitle: 'Document Type Classification',
             desc: 'Automated classification system for scanned document images (17 classes). Experiments with various backbones, TTA, augmentation, and post-processing.',
-            result: 'F1-score improved by 470% <br>(0.1701 → 0.9689)'
+            result: 'F1-score improved by 470% (0.1701 → 0.9689)'
         },
         ko: {
             title: '이미지 분류 모델 개발',
             subtitle: 'Document Type Classification',
             desc: '스캔 문서 이미지의 유형 자동 분류 (17-class). 문서 OCR 전단계에서 이미지 분류 성능 향상을 위한 다양한 백본 실험 및 TTA 적용.',
-            result: 'F1-score 470% 향상 <br>(0.1701 → 0.9689)'
+            result: 'F1-score 470% 향상 (0.1701 → 0.9689)'
         }
     },
     {
@@ -243,13 +257,13 @@ window.PROJECTS = [
             title: 'Dialogue Summarization Model',
             subtitle: 'Dialogue Summarization',
             desc: 'Korean daily dialogue summarization with QLoRA fine-tuning plus augmentation/post-processing to improve quality.',
-            result: 'Rouge score improved by 30% <br>(36.12 → 47.31)'
+            result: 'Rouge score improved by 30% (36.12 → 47.31)'
         },
         ko: {
             title: '대화 요약 모델 개발',
             subtitle: 'Dialogue Summarization',
             desc: '한국어 일상 대화 요약 모델. QLoRA 파인튜닝과 증강/후처리로 요약 품질을 높임.',
-            result: 'Rouge 점수 30% 향상 <br>(36.12 → 47.31)'
+            result: 'Rouge 점수 30% 향상 (36.12 → 47.31)'
         }
     },
     {
@@ -285,13 +299,13 @@ window.PROJECTS = [
             title: 'Commerce Marketing AI Agent',
             subtitle: 'Custom Multi-Agent System',
             desc: 'Six-agent marketing system that automates trend, ad copy, segmentation, review, competitor analysis, and strategy reports.',
-            result: 'End-to-End Multi-Agent <br>System Implementation'
+            result: 'End-to-End Multi-Agent System Implementation'
         },
         ko: {
             title: '상업 마케팅 AI 에이전트',
             subtitle: 'Custom Multi-Agent System',
             desc: '6개 에이전트로 트렌드/카피/세그먼트/리뷰/경쟁사/전략 리포트를 자동 생성해 리서치 반복을 단축.',
-            result: 'End-to-End 멀티 에이전트 <br>시스템 구현'
+            result: 'End-to-End 멀티 에이전트 시스템 구현'
         }
     },
     {
@@ -306,13 +320,13 @@ window.PROJECTS = [
             title: 'Movie Rating Prediction Service',
             subtitle: 'Movie Rating Prediction MLOps',
             desc: 'Built a movie rating prediction service and MLOps pipeline using the TMDB API. Fully automated from data collection through training, deployment, and monitoring.',
-            result: 'End-to-End CI/CD MLOps <br>Pipeline Implementation'
+            result: 'End-to-End CI/CD MLOps Pipeline Implementation'
         },
         ko: {
             title: '영화 평점 예측 서비스',
             subtitle: 'Movie Rating Prediction MLOps',
             desc: 'TMDB API를 활용한 사용자 리뷰 기반 영화 평점 예측 및 MLOps 파이프라인 구축. 데이터 수집부터 학습, 배포, 모니터링까지 완전 자동화.',
-            result: 'End-to-End CI/CD MLOps <br>파이프라인 구현'
+            result: 'End-to-End CI/CD MLOps 파이프라인 구현'
         }
     },
     {
