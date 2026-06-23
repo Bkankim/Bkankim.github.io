@@ -6,32 +6,32 @@ window.PROJECTS = [
         featured: true,
         status: 'completed',
         resultIcon: 'fa-server',
-        tags: ['Local LLM Serving', 'Self-Hosted', 'Multi-Agent', 'Discord Bot', 'Auto-Recovery'],
+        tags: ['Tailscale Mesh', 'Mac Studio ×15', 'Self-Hosted LLM', 'Multi-Agent', 'Discord Bot', 'Auto-Recovery'],
         links: [],
         en: {
             title: 'On-Prem LLM Multi-Agent Infra',
             subtitle: 'Enterprise AI System (Freelance, 2026)',
-            desc: 'Self-hosted LLM serving on on-prem hardware with no external cloud, fronted by a messenger (Discord) agent bot. A worker agent and a reviewer agent collaborate via automatic handoff, with auto-recovery after reboot for always-on operation.',
-            result: 'Private model self-served on-prem + worker/reviewer 2-agent auto-collaboration, reboot auto-recovery (always-on)'
+            desc: 'Meshed 15 role-assigned Mac Studios over Tailscale into an isolated private network, then self-hosted LLM serving on it with no external cloud. Fronted by a messenger (Discord) agent bot; a worker agent and a reviewer agent collaborate via automatic handoff, with auto-recovery after reboot for always-on operation.',
+            result: '15 Mac Studios on a Tailscale private network self-serving a private model + worker/reviewer 2-agent auto-collaboration, reboot auto-recovery (always-on)'
         },
         ko: {
             title: '온프렘 LLM 멀티에이전트 인프라',
             subtitle: '기업 AI 시스템 실무 (프리랜서, 2026)',
-            desc: '외부 클라우드 없이 온프렘 장비에 LLM을 자체 서빙하고 메신저(디스코드) 에이전트 봇으로 연결. 진행 에이전트와 검수 에이전트가 자동 핸드오프로 협업하며, 재부팅 후 자동 복구되어 상시 가동.',
-            result: '비공개 모델 온프렘 자체 서빙 + 진행·검수 2-에이전트 자동 협업, 재부팅 자동복구 상시가동'
+            desc: '역할별로 배정한 Mac Studio 15대를 Tailscale 메시로 묶어 외부에 노출되지 않는 독립 프라이빗 네트워크를 구성하고, 그 위에 외부 클라우드 없이 LLM을 자체 서빙. 메신저(디스코드) 에이전트 봇으로 연결하고, 진행·검수 에이전트가 자동 핸드오프로 협업하며 재부팅 후 자동 복구로 상시 가동.',
+            result: 'Mac Studio 15대 Tailscale 독립망에 비공개 모델 온프렘 서빙 + 진행·검수 2-에이전트 자동 협업, 재부팅 자동복구 상시가동'
         },
         caseStudy: {
             en: {
-                problem: 'An enterprise needed LLM capability without sending data to any external cloud, plus reliable unattended operation.',
-                role: 'Designed and built the on-prem serving and multi-agent orchestration end to end (freelance).',
-                tech: 'Self-hosted LLM serving, two-agent (worker + reviewer) auto-handoff, Discord bot interface, process supervision with reboot auto-recovery.',
-                impact: 'Private model served fully on-prem (zero external cloud), automatic worker/reviewer collaboration, and reboot auto-recovery for always-on availability.'
+                problem: 'An enterprise needed LLM capability without sending data to any external cloud, across multiple machines, with reliable unattended operation.',
+                role: 'Designed and built the on-prem serving and multi-agent orchestration end to end, and set up the 15-node Mac Studio Tailscale mesh private network (freelance).',
+                tech: '15-node Mac Studio Tailscale mesh private network, self-hosted LLM serving, two-agent (worker + reviewer) auto-handoff, Discord bot interface, process supervision with reboot auto-recovery.',
+                impact: 'Private model served fully on-prem (zero external cloud) over an isolated Tailscale network, automatic worker/reviewer collaboration, and reboot auto-recovery for always-on availability.'
             },
             ko: {
-                problem: '기업이 데이터를 외부 클라우드로 보내지 않으면서 LLM 역량을 확보하고, 무인 상시 가동까지 필요로 했음.',
-                role: '온프렘 서빙과 멀티에이전트 오케스트레이션을 직접 설계하고 구축 (프리랜서).',
-                tech: 'LLM 자체 서빙, 2-에이전트(진행+검수) 자동 핸드오프, 디스코드 봇 인터페이스, 재부팅 자동복구 프로세스 관리.',
-                impact: '비공개 모델 완전 온프렘 서빙(외부 클라우드 0), 진행·검수 자동 협업, 재부팅 자동복구로 상시 가용.'
+                problem: '기업이 데이터를 외부 클라우드로 보내지 않으면서 다수 장비에 걸쳐 LLM 역량을 확보하고, 무인 상시 가동까지 필요로 했음.',
+                role: '온프렘 서빙과 멀티에이전트 오케스트레이션을 직접 설계·구축하고, Mac Studio 15대 Tailscale 메시 독립 네트워크 인프라를 구성 (프리랜서).',
+                tech: 'Mac Studio 15대 Tailscale 메시 프라이빗 네트워크, LLM 자체 서빙, 2-에이전트(진행+검수) 자동 핸드오프, 디스코드 봇 인터페이스, 재부팅 자동복구 프로세스 관리.',
+                impact: '비공개 모델 완전 온프렘 서빙(외부 클라우드 0, Tailscale 독립망), 진행·검수 자동 협업, 재부팅 자동복구로 상시 가용.'
             }
         }
     },
