@@ -97,7 +97,7 @@ window.PROJECTS = [
         featured: false,
         status: 'mvp',
         resultIcon: 'fa-rocket',
-        tags: ['Next.js 15', 'Supabase', 'Google Vision API', 'OpenAI/Anthropic', 'Telegram Bot'],
+        tags: ['Next.js 15', 'Supabase', 'Cloudflare R2', 'Google Vision API', 'OpenAI/Anthropic', 'Telegram Bot'],
         links: [{ kind: 'external', href: 'https://ashd.bkan.dev', label: 'ashd.bkan.dev' }],
         en: {
             title: 'ASHD v2',
