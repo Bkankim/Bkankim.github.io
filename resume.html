@@ -101,13 +101,32 @@
         .edu-year { color: var(--muted); font-size: 8.4pt; }
         .license-list { font-size: 8.9pt; color: var(--text); }
 
+        /* Floating PDF download button (screen only; hidden in print/PDF) */
+        .download-pdf {
+            position: fixed; top: 18px; right: 18px; z-index: 1000;
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 16px; border-radius: 9px;
+            background: var(--navy); color: #fff; text-decoration: none;
+            font-size: 10pt; font-weight: 700; letter-spacing: .2px;
+            box-shadow: 0 4px 14px rgba(10, 41, 71, .30);
+            transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+        }
+        .download-pdf:hover { background: var(--gold); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(138, 84, 16, .38); }
+        .download-pdf:active { transform: translateY(0); }
+        .download-pdf svg { width: 16px; height: 16px; }
+
         @media print {
             body { background: #fff; }
             .page { margin: 0; }
+            .download-pdf { display: none !important; }
         }
     </style>
 </head>
 <body>
+    <a class="download-pdf" href="assets/Resume.pdf" download="Byeonghyeon_Kim_Resume.pdf" aria-label="Download résumé as PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span>PDF 다운로드</span>
+    </a>
     <div class="page">
 
         <!-- Header -->
@@ -134,9 +153,9 @@
         <section class="section">
             <div class="section-title">Summary</div>
             <div class="summary">
-                <strong>외부 클라우드 없이 돌아가는 온프렘 LLM 인프라와 권한 기반 메모리 시스템을 직접 구축한 보안 출신 LLM 엔지니어.</strong><br>
+                <strong>외부 클라우드 없이 돌아가는 온프렘 LLM 인프라와 권한 기반 메모리 시스템을 구축해 온 보안 출신 AI 엔지니어.</strong><br>
                 보안 관제·CERT 3년(CMT EYES) → <span class="arc">FastCampus AI 부트캠프(14기)</span> → <span class="arc">기업 AI 시스템 프리랜서</span> → 솔로프리너.<br>
-                멀티에이전트·RAG·AI 지식관리 시스템을 데모가 아닌 프로덕션까지 끝까지 출시합니다.<br>
+                멀티에이전트·RAG·AI 지식관리 시스템을 운영 단계까지 만들어 출시합니다.<br>
                 22+ 프로젝트 수행, 2+ 프로덕트 MVP 출시.<br>
                 정규직 <strong>AI/LLM 엔지니어링</strong> 포지션을 찾고 있습니다.
             </div>
@@ -177,10 +196,10 @@
                 </div>
                 <ul class="exp-desc">
                     <li>통화상담·고객 데이터 통합 <strong>27-table 정규화 DB 스키마</strong> 설계(자연키·소프트삭제·변경이력+불변식 명세), 외부검토 2회·적대적 코드검수 통과</li>
-                    <li><strong>온프렘 LLM 멀티에이전트 인프라</strong> - Mac Studio 15대 Tailscale 독립망에 외부 클라우드 0 LLM 자체 서빙, 진행·검수 2-에이전트 자동 핸드오프·재부팅 자동복구</li>
-                    <li><strong>팀·전사 AI 메모리 시스템</strong> - 오픈소스 <strong>Hindsight</strong> 커스터마이즈, 직원별 personal·team bank + 권한 격리(개인 bank 본인 only)로 개인정보 보안, 업무기록·일일보고 자동화 + <strong>Graphify</strong> 지식그래프 결합</li>
-                    <li><strong>통합 어드민 대시보드(데모)</strong> - 단일 모듈 레지스트리 파생 13모듈, 스펙주도(PRD/SDD/TDD), 접근성·다크모드·반응형, 테스트 <span class="hl">81건 통과</span></li>
-                    <li><strong>코드베이스 지식그래프</strong>(Graphify, 1,158노드/1,797관계/73커뮤니티) + 팀 자동화 도구·한국어 RAG 임베딩/리랭커 평가(MTEB-ko)</li>
+                    <li><strong>온프렘 LLM 멀티에이전트 인프라</strong>: Mac Studio 15대를 Tailscale 독립망으로 묶어 외부 클라우드 없이 LLM 자체 서빙, 진행·검수 2-에이전트 자동 핸드오프·재부팅 자동복구</li>
+                    <li><strong>팀·전사 AI 메모리 시스템</strong>: 오픈소스 <strong>Hindsight</strong> 커스터마이즈, 직원별 personal·team bank에 권한 격리(개인 bank는 본인만)로 개인정보 보호, 업무기록·일일보고 자동화에 <strong>Graphify</strong> 지식그래프 결합</li>
+                    <li><strong>통합 어드민 대시보드(데모)</strong>: 단일 모듈 레지스트리에서 13모듈 파생, 스펙주도(PRD/SDD/TDD), 접근성·다크모드·반응형, 테스트 <span class="hl">81건 통과</span></li>
+                    <li><strong>코드베이스 지식그래프</strong>(Graphify, 1,158노드/1,797관계/73커뮤니티)에 팀 자동화 도구와 한국어 RAG 임베딩/리랭커 평가(MTEB-ko) 결합</li>
                 </ul>
             </div>
 
@@ -215,7 +234,7 @@
                 </div>
                 <ul class="exp-desc">
                     <li>Fortinet 중심 WAF/IPS/UTM/SIEM 20+ 보안장비, 50+ 고객사 원격 관제·분석, 월 1,000건+ 이벤트 대응</li>
-                    <li>탐지·로그/패킷 분석·차단·정책 개선·보고까지 End-to-End CERT 프로세스 수행 (오탐/정탐률 <span class="hl">50%+ 개선</span>)</li>
+                    <li>탐지부터 로그/패킷 분석·차단·정책 개선·보고까지 CERT 프로세스 전 과정 수행 (오탐/정탐률 <span class="hl">50%+ 개선</span>)</li>
                     <li>반복 리포트 자동화 스크립트로 건당 작성 시간 <span class="hl">30분 → 5분</span> 단축</li>
                 </ul>
             </div>

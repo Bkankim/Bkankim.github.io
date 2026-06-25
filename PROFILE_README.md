@@ -2,7 +2,7 @@
 
 **AI Engineer · LLM Systems / Solopreneur** · Gyeonggi-do, South Korea
 
-CMT EYES에서 3년간 보안 관제·CERT 수행 후 AI로 전환. 15 AI 에이전트 오케스트레이션 기반 1인 AI 회사를 운영하며, 멀티 에이전트 파이프라인부터 자율 SaaS 팩토리까지 프로덕션 수준의 시스템을 구축합니다.
+CMT EYES에서 3년간 보안 관제와 CERT를 맡다가 AI로 넘어왔습니다. 지금은 15 AI 에이전트 오케스트레이션을 기반으로 1인 AI 회사를 운영합니다. 멀티 에이전트 파이프라인부터 자율 SaaS 팩토리까지, 실제로 돌아가는 시스템을 만듭니다.
 
 ## Products
 | Project | Stack | Status |
