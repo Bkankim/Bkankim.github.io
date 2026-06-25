@@ -57,13 +57,13 @@ window.PROJECTS = [
         },
         caseStudy: {
             en: {
-                problem: 'A 2017 legacy KISA scanner had scrambled rule-to-validator mappings - some checks returned unconditional PASS - so a naive 170-rule scanner would give false assurance.',
+                problem: 'A 2017 legacy KISA scanner had scrambled rule-to-validator mappings - some checks returned unconditional PASS - so a naive 133-rule scanner would give false assurance.',
                 role: 'Led the honest open-source v0.1: deleted false-PASS validators, built an experimental-by-default rule filter so only causally-verified checks ship, added a JSON/table CLI, and hardened SSH host-key verification.',
                 tech: 'Python 3.12, uv, Clean (hexagonal) architecture, AsyncSSH; branch-covered causal tests (PASS/FAIL/MANUAL) with anchored matchers + real command captures; GitHub Actions CI (unit / macOS causal / live Docker acceptance); MIT with LICENSE/SECURITY/CONTRIBUTING and a verified-vs-experimental README.',
                 impact: 'Shipped a trustworthy verified set instead of an inflated rule count; 536 tests passing plus a live SSH acceptance run binding CLI output to the in-process proof; false-PASS checks removed at the source.'
             },
             ko: {
-                problem: '2017년 레거시 KISA 스캐너는 규칙-validator 매핑이 뒤섞여 일부 점검이 무조건 PASS를 반환 - 170개 규칙 스캐너로 내세우면 거짓 안심을 줄 수 있었음.',
+                problem: '2017년 레거시 KISA 스캐너는 규칙-validator 매핑이 뒤섞여 일부 점검이 무조건 PASS를 반환 - 133개 규칙 스캐너로 내세우면 거짓 안심을 줄 수 있었음.',
                 role: '정직한 오픈소스 v0.1 주도: 거짓PASS validator 삭제, 검증 점검만 출하되도록 experimental 기본 필터 구축, JSON·표 CLI 추가, SSH 호스트키 검증 강화.',
                 tech: 'Python 3.12, uv, Clean(헥사고날) 아키텍처, AsyncSSH; 분기 커버 인과 테스트(PASS/FAIL/MANUAL)·anchored 매처·실제 명령 캡처; GitHub Actions CI(단위/macOS 인과/라이브 Docker 합격); MIT, LICENSE/SECURITY/CONTRIBUTING + 검증·실험 구분 README.',
                 impact: '부풀린 규칙 수 대신 신뢰 가능한 검증셋을 출하; 테스트 536건 통과 + CLI 출력을 인프로세스 증명에 결속한 라이브 SSH 합격; 거짓PASS 점검은 소스에서 제거.'
@@ -79,13 +79,13 @@ window.PROJECTS = [
         tags: ['Next.js 16 (RSC)', 'TypeScript', 'Neon · Drizzle', 'BetterAuth (Google·GitHub)', 'Cloudflare R2', 'Vitest · Sentry'],
         links: [{ kind: 'external', href: 'https://ourfolio.bkan.dev', label: 'ourfolio.bkan.dev' }],
         en: {
-            title: 'Ourfolio',
+            title: 'OurFolio',
             subtitle: 'Evidence-Based Portfolio Platform',
             desc: 'A SaaS platform for developers to prove their work with evidence-based portfolios - server-rendered public profiles, GitHub repo import, and dynamic OG/SEO. Hardened from MVP into a launch-ready v1 spine.',
             result: 'v1 launch-ready - RSC public page (warm LCP ~0.26s), GitHub import, full SEO/OG, critical-path tests + Sentry'
         },
         ko: {
-            title: 'Ourfolio',
+            title: 'OurFolio',
             subtitle: '근거 기반 포트폴리오 플랫폼',
             desc: '개발자가 작업물을 근거 기반 포트폴리오로 증명하는 SaaS - 서버 렌더 공개 프로필, GitHub 레포 임포트, 동적 OG/SEO. MVP에서 출시 가능한 v1 척추로 다듬음.',
             result: 'v1 출시 준비 - RSC 공개 페이지(warm LCP ~0.26s), GitHub 임포트, SEO/OG, 핵심경로 테스트 + Sentry'

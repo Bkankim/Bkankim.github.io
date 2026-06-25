@@ -1,15 +1,15 @@
 # Hi, I'm Byeonghyeon Kim (김병현)
 
-**AI & Security Specialist / Solopreneur** · Gyeonggi-do, South Korea
+**AI Engineer · LLM Systems / Solopreneur** · Gyeonggi-do, South Korea
 
 CMT EYES에서 3년간 보안 관제·CERT 수행 후 AI로 전환. 15 AI 에이전트 오케스트레이션 기반 1인 AI 회사를 운영하며, 멀티 에이전트 파이프라인부터 자율 SaaS 팩토리까지 프로덕션 수준의 시스템을 구축합니다.
 
 ## Products
 | Project | Stack | Status |
 |---------|-------|--------|
-| [Ourfolio](https://ourfolio.bkan.dev) | Next.js 16, Neon, Drizzle, BetterAuth | MVP |
-| [ASHD v2](https://github.com/Bkankim/ASHD) | Next.js 15, Supabase, Google Vision, LLM | MVP |
-| [BluePy 2.0](https://github.com/Bkankim/Bluepy) | Python, PySide6, Clean Architecture | In Progress |
+| [OurFolio](https://ourfolio.bkan.dev) | Next.js 16, Neon, Drizzle, BetterAuth | MVP |
+| [ASHD v2](https://ashd.bkan.dev) | Next.js 15, Supabase, Google Vision, LLM | MVP |
+| [BluePy 2.0](https://github.com/Bkankim/Bluepy) | Python 3.12 · uv · AsyncSSH · Clean Architecture | In Progress |
 | Subari (수발이) | 수용자 가족 케어 서비스 | Planning |
 | Wukong (제천대성) | AI Autonomous Micro-SaaS Factory | Planning |
 

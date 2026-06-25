@@ -1,6 +1,6 @@
 # bkankim.github.io
 
-Personal portfolio site for Byeonghyeon Kim, AI & Security Engineer.
+Personal portfolio site for Byeonghyeon Kim, AI Engineer · LLM Systems (security-origin).
 Static HTML/CSS/JS with no build step, served on GitHub Pages.
 
 ## Structure
